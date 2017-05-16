@@ -3,7 +3,6 @@ $(document).ready(function(){
   ajustesIniciales();
   function ajustesIniciales(){
     $('.wrapp').css({'height':wHeight+'px'});
-    $('.h-wrapp').css({'height':wHeight/2+'px'});
   };
 });
 $(window).scroll(function(){
