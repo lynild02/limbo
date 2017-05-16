@@ -15,5 +15,5 @@
 </ul>
 <p></p>
 <hr/>
-<Angel>de jesus Gomez juarez - Lynild</Angel>
-<Limbo>City</Limbo>
+<h3>Angel de jesus Gomez juarez - Lynild</h3>
+<h3>Limbo City</h3>
