@@ -1,0 +1,100 @@
+//output:index.php
+|<?php include '../../m-config.php';?>
+doctype html
+html(lang='es')
+    head
+        title Portafolio - Limbo City
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='description', content='description')
+        meta(name='keywords', content='keywords')
+        meta(name='author', content='author')
+        meta(name="robots", content="index, follow")
+
+        //- ----- link website ----- //
+        link(rel='icon' href='src/img/favicon.png' type='image/x-icon')
+
+        //- ----- CSS Files ----- //
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/normalize.css')
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/skeleton.css')
+        link(rel='stylesheet', href='css/master.min.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300')
+        
+        //- ---- JS Files ---- //
+        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js' async='async')
+        
+    body.page-overview
+      //- ---- First ---- //
+      header
+        nav
+          ul
+            li Inicio
+              a(href='../../')
+            li Tutoriales
+              a(href='/t')
+            li Dibujo y mas
+              a(href='/a')
+            li Acerda de...
+              a(href='/h')
+      .fullp#fullpage
+        #f-backg.section.asect
+          .title#way
+            span Portafolio
+            hr
+            h4 Por que los hechos cuentan mas que las palabras.
+        .section.asect
+          .title.black
+            span.ring All Happy By Design
+            p.
+              Como <b>diseñador y programador web</b> siempre intento dejar cada gota de empeño en mis trabajos y quiero compartir algunos contigo.
+        .section.fp-autoscroll.whole-content
+          #last
+            div
+              h2.hunt Mis ultimos proyectos
+              p.indief.i My last projects
+              p.
+                Mis trabajos mas recientes de Diseño y Programación WEB
+              .row
+                //- ---- Aqui proceso de presentacion 3 principales ---- //
+                |<?php
+                |  $query="SELECT * FROM projects ORDER BY date DESC LIMIT 0, 3";
+                |  $do = $conexion->query($query);
+                |?>
+                //- ---- Bucle ---- //
+                |<?php while($row=$do->fetch_assoc()){ ?>
+                div.columns.four.samehw
+                  figure.rr
+                    img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
+                    figcaption <?php echo $row['title'];?><br><hr><span><?php echo $row['description'];?></span>
+                    a(href!="<?php echo $row['url'];?>", target='_blank')
+                |<?php } ?>
+            h2.hunt Todos mis proyectos
+            p.indief.i All my projects
+            p.indief Todos los projectos de mi portafolio, para clientes fisicos/reales y proyectos personales en proceso o proyectos experimentales.<br><span class='indief i'>Beware, Genius at Work :v</span>
+            .c-fig  
+              |<?php
+              |  $query="SELECT * FROM projects ORDER BY date ASC";
+              |  $do = $conexion->query($query);
+              |?>
+              //- ---- Bucle ---- //
+              |<?php while($row=$do->fetch_assoc()){ ?>
+              figure.close
+                img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
+                figcaption
+                  #c-text
+                    p <?php echo $row['title'];?>
+                    hr
+                    p.pp2 view
+                a(href!="<?php echo $row['url'];?>", target='_blank')
+              |<?php } ?>
+    script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js' async='async')
+    script(type='text/javascript', src='js/main.js' async='async')
+    link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>js/functions.js' async='async')
+    script.
+      $(document).ready(function(){
+        $('#fullpage').fullpage();
+      });
+    link(rel='stylesheet', href!='<?=$serv?>css/font.css')

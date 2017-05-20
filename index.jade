@@ -16,7 +16,9 @@ html(lang='es' ng-app)
         //- ----- CSS Files ----- //
         link(rel='stylesheet', href='Skeleton/css/normalize.css')
         link(rel='stylesheet', href='Skeleton/css/skeleton.css')
+        link(rel='stylesheet', href='css/font.css')
         link(rel='stylesheet', href='css/master.min.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300')
         
         //- ---- JS Files ----- //
         script(type='text/javascript', src='node_modules/jquery/dist/jquery.js' async='async')
@@ -24,7 +26,70 @@ html(lang='es' ng-app)
     body.page-overview
       //- ---- First ---- //
       header
+        nav
+          ul
+            li Portafolio
+              a(href='pages/p')
+            li Tutoriales
+              a(href='t')
+            li Dibujo y mas
+              a(href='a')
+            li Acerda de...
+              a(href='h')
+      .wrapper
+        .hero-title
+          span Creamos y te enseñamos a crear.
+          hr
+          h4 Diseño y Programación Web &mdash; Tutoriales Gratuitos
       .wrapp
-        
-
+        article.container
+          .hero.h-wrapp
+            #tittle
+              h2 Limbo City
+              h5 <i>Lorem Ipsum</i>
+          h3.hunt Me gusta lo dificil, me atrae lo complicado y me enamoro de lo imposible.
+          hr
+          .content-wrapper
+            p.indief Diseñador Web Independiente&nbsp;&mdash;&nbsp;desde M&eacute;xico
+            p.indief.i Freelance Web Designer&nbsp;&mdash;&nbsp;from M&eacute;xico
+            p#present.
+              Hola! Soy <b>Lynild</b>. Se puede decir que soy el <i>'fundador/creador/gato/lo-que-sea'</i> de <b>Limbo City</b>; para los que tengan interes en saber de que va todo esto les pondre un link en el que se describe todo acerca del proyecto <b><i>Limbo City</i></b> justo... <a href='h/theidea.php'>aqui.</a><br><br>
+              En esta pagina, aparte de poder contratar mis servicios como diseñador/programador, tambien encontraras secciones dedicadas al arte del <b>dibujo</b>, el arte de la <b>programación</b> y <b>tutoriales</b> para aquellas personas que desean aprender un <b>poco sobre todo.</b>
+            h3.hunt Pasemos a lo bueno!
+            #hail(ng-controller="AppCtrl")
+              p.indief Que quieres hacer ahora?
+              p.indief.i What do you want to do Now?
+              .row.img-row
+                figure.rr.columns.four
+                  img(src='img/block/6.jpg', title="portfolio", alt="portafolio", attr)
+                  figcaption Portafolio
+                  a(href='/p')
+                figure.rr.columns.four
+                  img(src='img/block/2.jpg', title="tutorials", alt="tutoriales", attr)
+                  figcaption Tutoriales
+                  a(href='/t')
+                figure.rr.columns.four
+                  img(src='img/block/1.jpg', title="art", alt="arte", attr)
+                  figcaption Arte
+                  a(href='/a')
+              hr
+            h3.hunt Redes Sociales
+            .row.rsoc
+              figure.columns.four
+                img(src='img/fb.png', title="facebook", alt="facebook", attr)
+              figure.columns.four
+                img(src='img/tw.png', title="twitter", alt="twitter", attr)
+              figure.columns.four
+                img(src='img/be.png', title="behance", alt="behance", attr)
+      footer
+        article.container
+          .row
+            .columns.four
+            .columns.four
+            .columns.four
+    script(type='text/javascript', src='node_modules/angular/angular.js')
     script(type='text/javascript', src='js/functions.js' async='async')
+    link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js' async='async')
+    
