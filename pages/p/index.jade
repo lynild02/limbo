@@ -18,24 +18,29 @@ html(lang='es')
         link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/normalize.css')
         link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/skeleton.css')
         link(rel='stylesheet', href='css/master.min.css')
+        link(rel='stylesheet', href!='<?=$serv?>node_modules/loaders.css/loaders.min.css')
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300')
-        
+
         //- ---- JS Files ---- //
-        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js' async='async')
+        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js')
         
-    body.page-overview
+    body.page-overview(onload = "funcion($('.loader-c').fadeOut('slow'))")
       //- ---- First ---- //
+      .loader-c
+        .loader
+          .ball-scale-multiple
+      .back-big-g
       header
         nav
           ul
             li Inicio
               a(href='../../')
             li Tutoriales
-              a(href='/t')
+              a(href='../t')
             li Dibujo y mas
-              a(href='/a')
+              a(href='../a')
             li Acerda de...
-              a(href='/h')
+              a(href='../h')
       .fullp#fullpage
         #f-backg.section.asect
           .title#way
@@ -63,36 +68,38 @@ html(lang='es')
                 //- ---- Bucle ---- //
                 |<?php while($row=$do->fetch_assoc()){ ?>
                 div.columns.four.samehw
-                  figure.rr
+                  figure.rr(class!='<?php echo $row["attr"];?>')
                     img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
                     figcaption <?php echo $row['title'];?><br><hr><span><?php echo $row['description'];?></span>
                     a(href!="<?php echo $row['url'];?>", target='_blank')
+                  |<script>$('.<?php echo $row["attr"];?>').mouseover(function(){$('.back-big-g').css({'transition':'all .5s ease-in-out','opacity':1,'background':'url(data:image/png;base64,<?php echo base64_encode($row["image"]);?>)','background-size':'contain','background-repeat':'no-repeat','background-position':'center center'})});$('.<?php echo $row["attr"];?>').mouseleave(function(){$('.back-big-g').css({'opacity':0,'transition':'all .3s ease-in-out'})});</script>
                 |<?php } ?>
             h2.hunt Todos mis proyectos
             p.indief.i All my projects
             p.indief Todos los projectos de mi portafolio, para clientes fisicos/reales y proyectos personales en proceso o proyectos experimentales.<br><span class='indief i'>Beware, Genius at Work :v</span>
-            .c-fig  
-              |<?php
-              |  $query="SELECT * FROM projects ORDER BY date ASC";
-              |  $do = $conexion->query($query);
-              |?>
-              //- ---- Bucle ---- //
-              |<?php while($row=$do->fetch_assoc()){ ?>
-              figure.close
-                img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
-                figcaption
-                  #c-text
-                    p <?php echo $row['title'];?>
-                    hr
-                    p.pp2 view
-                a(href!="<?php echo $row['url'];?>", target='_blank')
-              |<?php } ?>
-    script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js' async='async')
-    script(type='text/javascript', src='js/main.js' async='async')
+          .c-fig
+            |<?php
+            |  $query="SELECT * FROM projects ORDER BY date ASC";
+            |  $do = $conexion->query($query);
+            |?>
+            //- ---- Bucle ---- //
+            |<?php while($row=$do->fetch_assoc()){ ?>
+            figure.close
+              img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
+              figcaption
+                #c-text
+                  p.tt <?php echo $row['title'];?>
+                  hr
+                  p.pp2 view
+              a(href!="<?php echo $row['url'];?>", target='_blank')
+            |<?php } ?>
+    script(type='text/javascript', src!='<?=$serv?>js/functions.js' )
+    script(type='text/javascript', src='js/main.js' )
+    script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js' )
+    script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js')
     link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css')
-    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js' async='async')
-    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js' async='async')
-    script(type='text/javascript', src!='<?=$serv?>js/functions.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js' )
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js' )
     script.
       $(document).ready(function(){
         $('#fullpage').fullpage();

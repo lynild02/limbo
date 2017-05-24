@@ -5,5 +5,10 @@ $(document).ready(function(){
     $('.samehw').css({
       'height':colwidth+'px'
     })
-  }
+  };
+  //$('.bravhac').mouseover(function(){
+    //$('.back-big-g').css({
+      //'background':'url(img/bravhac.jpg)'
+    //})
+  //})
 });

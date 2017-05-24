@@ -37,6 +37,22 @@ figure.rr
   text-transform: uppercase
   text-align: center
 .page-overview
+  padding-bottom: 50px
+  .loader-c
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    z-index: 11
+    transition: all .5s ease-in-out
+    .loader
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 12
   header
     position: fixed
     width: 100%
@@ -99,10 +115,11 @@ figure.rr
         font-size: 5em
         text-align: center
   .wrapp
-    padding-top: 70px
+    padding: 70px 0px
+    margin-bottom: 200px
+    background: #fff
     article.container
       box-shadow: rgba(0,0,0,.3) 1px 3px 5px
-      margin-bottom: 20px
       .hero
         width: 100%
         position: relative
@@ -119,7 +136,7 @@ figure.rr
           text-align: center
           color: #fff
           h2,h5
-            text-shadow: rgba(0,0,0,.3) 1px 3px 3px
+            text-shadow: rgba(0,0,0,.8) 1px 3px 5px
       .content-wrapper
         width: 100%
         padding: 10px
@@ -163,11 +180,28 @@ figure.rr
         .rsoc
           figure
             padding: 8%
+            position: relative
             img
               border-radius: 50%
-              &:hover
-                cursor: pointer
+            a
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
   footer
     background: #000
     width: 100%
     min-height: 100px
+    padding: 50px 0px
+    position: fixed
+    bottom: 0
+    z-index: -1
+    .container
+      .row
+        .columns.four
+          ul
+            list-style: none
+            li
+              a:hover
+                color: #fff

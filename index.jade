@@ -1,4 +1,5 @@
 //output:index.php
+|<?php include 'm-config.php';?>
 doctype html
 html(lang='es' ng-app)
     head
@@ -18,24 +19,28 @@ html(lang='es' ng-app)
         link(rel='stylesheet', href='Skeleton/css/skeleton.css')
         link(rel='stylesheet', href='css/font.css')
         link(rel='stylesheet', href='css/master.min.css')
+        link(rel='stylesheet', href!='<?=$serv?>node_modules/loaders.css/loaders.min.css')
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300')
         
         //- ---- JS Files ----- //
         script(type='text/javascript', src='node_modules/jquery/dist/jquery.js' async='async')
         
-    body.page-overview
+    body.page-overview(onload = "function($('.loader-c').fadeOut('slow'))")
       //- ---- First ---- //
+      .loader-c
+        .loader
+          .ball-scale-multiple
       header
         nav
           ul
             li Portafolio
-              a(href='pages/p')
+              a(href!='<?=$serv?>/pages/p')
             li Tutoriales
-              a(href='t')
+              a(href!='<?=$serv?>/pages/t')
             li Dibujo y mas
-              a(href='a')
+              a(href!='<?=$serv?>/pages/a')
             li Acerda de...
-              a(href='h')
+              a(href!='<?=$serv?>/pages/h')
       .wrapper
         .hero-title
           span Creamos y te enseñamos a crear.
@@ -46,50 +51,68 @@ html(lang='es' ng-app)
           .hero.h-wrapp
             #tittle
               h2 Limbo City
-              h5 <i>Lorem Ipsum</i>
+              h5 <i>Si no existe aún... Prográmalo!</i>
           h3.hunt Me gusta lo dificil, me atrae lo complicado y me enamoro de lo imposible.
           hr
           .content-wrapper
             p.indief Diseñador Web Independiente&nbsp;&mdash;&nbsp;desde M&eacute;xico
             p.indief.i Freelance Web Designer&nbsp;&mdash;&nbsp;from M&eacute;xico
             p#present.
-              Hola! Soy <b>Lynild</b>. Se puede decir que soy el <i>'fundador/creador/gato/lo-que-sea'</i> de <b>Limbo City</b>; para los que tengan interes en saber de que va todo esto les pondre un link en el que se describe todo acerca del proyecto <b><i>Limbo City</i></b> justo... <a href='h/theidea.php'>aqui.</a><br><br>
+              Hola! Soy <b><a href='<?=$serv?>/pages/t/aboutme.php'>Lynild</a></b>. Se puede decir que soy el <i>'fundador/creador/gato/lo-que-sea'</i> de <b>Limbo City</b>; para los que tengan interes en saber de que va todo esto les dejare un link en el que se describe todo acerca del proyecto <b><i>Limbo City</i></b> justo... <a href='h/theidea.php'>aqui.</a><br><br>
               En esta pagina, aparte de poder contratar mis servicios como diseñador/programador, tambien encontraras secciones dedicadas al arte del <b>dibujo</b>, el arte de la <b>programación</b> y <b>tutoriales</b> para aquellas personas que desean aprender un <b>poco sobre todo.</b>
             h3.hunt Pasemos a lo bueno!
-            #hail(ng-controller="AppCtrl")
+            #hail
               p.indief Que quieres hacer ahora?
               p.indief.i What do you want to do Now?
               .row.img-row
                 figure.rr.columns.four
                   img(src='img/block/6.jpg', title="portfolio", alt="portafolio", attr)
                   figcaption Portafolio
-                  a(href='/p')
+                  a(href!='<?=$serv?>/pages/p')
                 figure.rr.columns.four
                   img(src='img/block/2.jpg', title="tutorials", alt="tutoriales", attr)
                   figcaption Tutoriales
-                  a(href='/t')
+                  a(href!='<?=$serv?>/pages/t')
                 figure.rr.columns.four
                   img(src='img/block/1.jpg', title="art", alt="arte", attr)
                   figcaption Arte
-                  a(href='/a')
+                  a(href!='<?=$serv?>/pages/a')
               hr
             h3.hunt Redes Sociales
             .row.rsoc
               figure.columns.four
                 img(src='img/fb.png', title="facebook", alt="facebook", attr)
+                a(href='https://www.facebook.com/limbocity/' title='Facebook' target='_blank')
               figure.columns.four
                 img(src='img/tw.png', title="twitter", alt="twitter", attr)
+                a(href='')
               figure.columns.four
                 img(src='img/be.png', title="behance", alt="behance", attr)
+                a(href='https://www.behance.net/lynild02')
       footer
         article.container
           .row
             .columns.four
+              ul
+                li
+                  a(href='#') About Us
+                li
+                  a(href='#') About ME
+                li
+                  a(href='#') Privacidad
+                li
+                  a(href='#') Responsabilidad
             .columns.four
+              
             .columns.four
     script(type='text/javascript', src='node_modules/angular/angular.js')
     script(type='text/javascript', src='js/functions.js' async='async')
-    link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js' async='async')
+    script.
+      $(document).ready(function(){
+        $('#fullpage').fullpage();
+      });
+    link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css' async='async')
     script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js' async='async')
     script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js' async='async')
     
