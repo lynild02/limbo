@@ -8,7 +8,7 @@
     <meta name="keywords" content="keywords">
     <meta name="author" content="author">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="src/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
     <link rel="stylesheet" href="css/master.min.css">

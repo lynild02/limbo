@@ -6,11 +6,17 @@ html(lang='es' ng-app)
         title Limbo City PRO
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-        meta(name='description', content='description')
-        meta(name='keywords', content='limbo,city,pro,angel,')
+        meta(name='description', content='Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!')
+        meta(name='keywords', content='limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar.matamoros,puebla,mexico')
         meta(name='author', content='Angel de jesus gomez juarez, lynild02')
         meta(name="robots", content="index, follow")
-        
+        meta(property="og:title" content="Limbo City PRO")
+        meta(property="og:url" content="http://limbocity.xyz")
+        meta(property="og:site_name" content="LimboCity")
+        meta(property="og:locale" content="es_ES")
+        meta(property="og:image" content="http://limbocity.xyz/img/og.png")
+        meta(property="og:image:type" content="image/png")
+        meta(property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!")
         //- ----- link website ----- //
         link(rel='icon' href='src/img/favicon.png' type='image/x-icon')
 
@@ -85,14 +91,14 @@ html(lang='es' ng-app)
                 a(href='https://www.facebook.com/limbocity/' title='Facebook' target='_blank')
               figure.columns.four
                 img(src='img/tw.png', title="twitter", alt="twitter", attr)
-                a(href='')
+                a(href='' target='_blank')
               figure.columns.four
                 img(src='img/be.png', title="behance", alt="behance", attr)
-                a(href='https://www.behance.net/lynild02')
+                a(href='https://www.behance.net/lynild02' target='_blank')
       footer
         article.container
           .row
-            .columns.four
+            .columns.three
               ul
                 li
                   a(href='#') About Us
@@ -102,9 +108,28 @@ html(lang='es' ng-app)
                   a(href='#') Privacidad
                 li
                   a(href='#') Responsabilidad
-            .columns.four
-              
-            .columns.four
+            .columns.three
+              ul
+                li
+                  a(href='https://www.facebook.com/limbocity/' title='Facebook' target='_blank') Facebook
+                li
+                  a(href='#') Twitter
+                li
+                  a(href='#') Google +
+                li
+                  a(href='https://www.behance.net/lynild02' target='_blank') Behance
+            .columns.six#mc_embed_signup
+              p <strong>Suscribete para recibir actualizaciones</strong> Recibe las noticias y mensajes lo mas pronto posible.
+              form.row#mc-embedded-subscribe-form(action="//xyz.us12.list-manage.com/subscribe/post?u=1f3f3272787af7763f0467cdd&amp;id=b2c233b12a" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+                .columns.eight
+                  input.u-full-width.email#mce-EMAIL(type="email" value="" name="EMAIL" placeholder="Correo Electronico" required)
+                div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                  input(type="text" name="b_1f3f3272787af7763f0467cdd_b2c233b12a" tabindex="-1" value="")
+                .columns.four
+                  input.button-primary#mc-embedded-subscribe.button(type='submit' name="subscribe" value='Suscribir')
+          .row
+            p.indief.i Creado por <strong>Angel de Jesus Gomez Juarez, Lynild</strong>. <strong>Limbo City 2017</strong>
+                
     script(type='text/javascript', src='node_modules/angular/angular.js')
     script(type='text/javascript', src='js/functions.js' async='async')
     script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js' async='async')

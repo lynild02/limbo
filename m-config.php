@@ -3,7 +3,9 @@
   $user = 'root';
   $pass = '';
   $db = 'Development';
+  $tdb = 'tutoriales';
   $conexion = new mysqli($server, $user, $pass, $db);
+  $tconexion = new mysqli($server, $user, $pass, $tdb);
   $conexion->set_charset('utf8');
   if ($conexion->connect_errno) {
   	echo "An error has ocurred while try to connect with the DB {$conexion->connect_errno}";

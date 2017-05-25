@@ -12,7 +12,7 @@ html(lang='es')
       meta(name="robots", content="index, follow")
 
       //- ----- link website ----- //
-      link(rel='icon' href='src/img/favicon.png' type='image/x-icon')
+      link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
 
       //- ----- CSS Files ----- //
       link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/normalize.css')
@@ -74,8 +74,15 @@ html(lang='es')
                 h3 Tienes un Mac?
                 hr
                 p Mantenlo fresco y sano! Ademas te enseñamos a darle el mejor uso para cualquier cosa.
+              a(href='mac')
+          figure#tnotes.square
+            figcaption
+              .tcont
+                h3 Notas
+                hr
+                p Concejos sobre seguiridad en la internet en general, correcto uso de nuestros dispositivos y como aprovechar los recursos que internet nos da. ETC...
+              a(href='notes')
           h3#htt Selecciona la categoria que necesites
-            a(href='mac')
     script(type='text/javascript', src='js/main.js')
     script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js' )
     script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js')

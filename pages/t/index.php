@@ -8,7 +8,7 @@
     <meta name="keywords" content="keywords">
     <meta name="author" content="author">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="src/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
     <link rel="stylesheet" href="css/master.min.css">
@@ -75,10 +75,19 @@
               <h3>Tienes un Mac?</h3>
               <hr>
               <p>Mantenlo fresco y sano! Ademas te enseñamos a darle el mejor uso para cualquier cosa.</p>
-            </div>
+            </div><a href="mac"></a>
           </figcaption>
         </figure>
-        <h3 id="htt">Selecciona la categoria que necesites<a href="mac"></a></h3>
+        <figure id="tnotes" class="square">
+          <figcaption>
+            <div class="tcont">
+              <h3>Notas</h3>
+              <hr>
+              <p>Concejos sobre seguiridad en la internet en general, correcto uso de nuestros dispositivos y como aprovechar los recursos que internet nos da. ETC...</p>
+            </div><a href="notes"></a>
+          </figcaption>
+        </figure>
+        <h3 id="htt">Selecciona la categoria que necesites</h3>
       </div>
     </div>
   </body>
