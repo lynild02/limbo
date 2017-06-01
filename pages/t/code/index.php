@@ -42,7 +42,9 @@
       </nav>
     </header>
     <div id="initm">
-      <h3>Aprendamos algo nuevo... por lo menos eso espero :v</h3>
+      <h3 class="dot">Code</h3>
+      <hr>
+      <h2>Aprendamos algo nuevo... por lo menos eso espero :v</h2>
       <p>Ten presente que puedes enviar un mensaje siempre que quieras a <a href='mailto:info@limbocity.xyz'>este correo</a> o nuestras <a href='<?=$serv?>social'>redes sociales</a>, para hacer cualquier petición.</p>
     </div>
     <div id="pub"></div><?php
@@ -51,8 +53,8 @@
     ?>
     <div id="container" class="grid"><?php while($row=$do->fetch_assoc()){ ?>
       <div class="grid-sizer"></div>
-      <div class="grid-item"><img src="data:image/png;base64,<?php echo base64_encode($row["img"]);?>" title="title" alt="alt" attr class="lazy">
-        <figcaption><?php echo $row['title'];?></figcaption><a href="#" title="<?php echo $row['title'];?>"></a>
+      <div class="grid-item"><img src="data:image/png;base64,<?php echo base64_encode($row["img"]);?>" title="<?php echo $row['title'];?>" alt="<?php echo $row['title'];?>" attr class="lazy">
+        <figcaption><?php echo $row['title'];?></figcaption><a href="<?php echo $row['lnk'];?>" title="<?php echo $row['title'];?>"></a>
       </div><?php } ?>
     </div>
     <footer>
@@ -110,4 +112,13 @@
     });
   </script>
   <link rel="stylesheet" href="<?=$serv?>css/font.css">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70395856-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </html>

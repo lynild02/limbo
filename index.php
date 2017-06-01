@@ -1,5 +1,5 @@
 <?php include 'm-config.php';?><!DOCTYPE html>
-<html lang="es" ng-app>
+<html lang="es">
   <head>
     <title>Limbo City PRO</title>
     <meta charset="utf-8">
@@ -9,11 +9,14 @@
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Limbo City PRO">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="http://limbocity.xyz">
     <meta property="og:site_name" content="LimboCity">
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale" content="es_es">
     <meta property="og:image" content="http://limbocity.xyz/img/og.png">
     <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
     <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
     <link rel="icon" href="src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="Skeleton/css/normalize.css">
@@ -33,10 +36,10 @@
     <header>
       <nav>
         <ul>
-          <li>Portafolio<a href="<?=$serv?>/pages/p"></a></li>
-          <li>Tutoriales<a href="<?=$serv?>/pages/t"></a></li>
-          <li>Dibujo y mas<a href="<?=$serv?>/pages/a"></a></li>
-          <li>Acerda de...<a href="<?=$serv?>/pages/h"></a></li>
+          <li>Portafolio<a href="<?=$serv?>pages/p"></a></li>
+          <li>Tutoriales<a href="<?=$serv?>pages/t"></a></li>
+          <li>Dibujo y mas<a href="<?=$serv?>pages/a"></a></li>
+          <li>Acerda de...<a href="<?=$serv?>pages/h"></a></li>
         </ul>
       </nav>
     </header>
@@ -60,7 +63,7 @@
           <p class="indief">Diseñador Web Independiente&nbsp;&mdash;&nbsp;desde M&eacute;xico</p>
           <p class="indief i">Freelance Web Designer&nbsp;&mdash;&nbsp;from M&eacute;xico</p>
           <p id="present">
-            Hola! Soy <b><a href='<?=$serv?>/pages/t/aboutme.php'>Lynild</a></b>. Se puede decir que soy el <i>'fundador/creador/gato/lo-que-sea'</i> de <b>Limbo City</b>; para los que tengan interes en saber de que va todo esto les dejare un link en el que se describe todo acerca del proyecto <b><i>Limbo City</i></b> justo... <a href='h/theidea.php'>aqui.</a><br><br>
+            Hola! Soy <b><a href='<?=$serv?>/pages/t/aboutme.php'>Lynild</a></b>. Se puede decir que soy el <i>'fundador/creador/gato/lo-que-sea'</i> de <b>Limbo City</b>; para los que tengan interes en saber de que va todo esto les dejare un link en el que se describe todo acerca del proyecto <b><i>Limbo City</i></b> justo... <a href='pages/h/theidea.php'>aqui.</a><br><br>
             En esta pagina, aparte de poder contratar mis servicios como diseñador/programador, tambien encontraras secciones dedicadas al arte del <b>dibujo</b>, el arte de la <b>programación</b> y <b>tutoriales</b> para aquellas personas que desean aprender un <b>poco sobre todo.</b>
           </p>
           <h3 class="hunt">Pasemos a lo bueno!</h3>
@@ -129,15 +132,15 @@
       </article>
     </footer>
   </body>
-  <script type="text/javascript" src="node_modules/angular/angular.js"></script>
-  <script type="text/javascript" src="js/functions.js" async="async"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js" async="async"></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js" async></script>
+  <script type="text/javascript" src="js/functions.js" async></script>
   <script>
-    $(document).ready(function(){
-      $('#fullpage').fullpage();
-    });
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70395856-1', 'auto');
+    ga('send', 'pageview');
   </script>
-  <link rel="stylesheet" href="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css" async="async">
-  <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js" async="async"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js" async="async"></script>
 </html>

@@ -42,3 +42,8 @@
     font-family: huntress;
     src: url(../fonts/huntress.otf);
 }
+
+@font-face{
+    font-family: sanf;
+    src: url(../fonts/SanFrancisco.ttf);
+}

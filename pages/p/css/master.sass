@@ -121,6 +121,8 @@ figure.rr
       &#f-backg
         background: url(../../../img/bg/ao.gif)
       background: #fff
+      &.ahbd
+        background: url(../img/naturalw.png)
       .title
         position: absolute
         width: 50%
@@ -137,14 +139,15 @@ figure.rr
           &.ring
             font-family: $gloss
     .whole-content
-      padding-top: 50px
       #last
-        margin: 50px 0
+        margin-top: 60px
         padding: 10px 50px
         width: 100%
         height: auto
         text-align: center
         div
+          h2,p
+            text-shadow: rgba(255,255,255,.5) 1px 2px 2px
           .row
             div.columns.four
               padding: 50px
@@ -198,86 +201,142 @@ figure.rr
       //Aqui segunda seccion
       .c-fig
         width: 100%
-        height: auto
         position: relative
+        padding: 20px 0
         background: url(../img/bravhac.jpg)
           repeat: no-repeat
           size: cover
           position: center center
         overflow: hidden
-        .close
-          width: 25%
-          float: left
-          height: auto
-          max-height: 300px
-          min-height: 300px
-          position: relative
-          margin: 0
-          display: inline-block
-          overflow: hidden
-          background: #fff
-          img
-            opacity: 1
-            min-width: 100%
-            min-height: 100%
-            width: auto
+        .cfigt
+          position: absolute
+          width: 95%
+          height: 95%
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          .close
+            width: 25%
+            float: left
             height: auto
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-            transition: all .3s ease-in-out
-            transition: opacity .5s ease-in-out
-          figcaption
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            transition: all .3s ease-in-out
-            #c-text
+            max-height: 300px
+            min-height: 300px
+            position: relative
+            margin: 0
+            display: inline-block
+            overflow: hidden
+            img
+              opacity: 0
+              min-width: 100%
+              min-height: 100%
+              width: auto
+              height: auto
               position: absolute
               top: 50%
               left: 50%
               transform: translate(-50%, -50%)
-              text-align: center
-              color: #fff
-              text-shadow: rgba(0,0,0,.3) 1px 2px 1px
-              font-size: bold
-              font-family: 'AlpineCleanL', sans-serif
-              .tt
-                opacity: 0
-                transform: translateY(-100%)
-                transition: all .3s ease-in-out
-                font-weight: bold
-                font-size: 1.7em
-              .pp2
-                opacity: 0
-                transform: translateY(100%)
-                transition: all .3s ease-in-out
-              hr
-                transform: translateX(-100%)
-                opacity: 0
-                transition: all .3s ease-in-out
-          a
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-          &:hover
-            transition: all .3s ease-in-out
-            background: transparent
-            img
-              opacity: 0
               transition: all .3s ease-in-out
+              transition: opacity .5s ease-in-out
             figcaption
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              transition: all .3s ease-in-out
               #c-text
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                text-align: center
+                color: #fff
+                text-shadow: rgba(0,0,0,.3) 1px 2px 1px
+                font-size: bold
+                font-family: 'AlpineCleanL', sans-serif
+                .tt
+                  font-weight: bold
+                  font-size: 1.7em
                 .tt,.pp2
-                  opacity: 1
                   transform: translate(0)
+                  opacity: 1
                   transition: all .3s ease-in-out
                 hr
+                  transform: translateX(0)
                   opacity: 1
-                  transform: translate(0)
                   transition: all .3s ease-in-out
+            a
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+            &:hover
+              transition: all .3s ease-in-out
+              background: transparent
+              img
+                opacity: 1
+                transition: all .3s ease-in-out
+              figcaption
+                #c-text
+                  .tt
+                    opacity: 0
+                    transform: translateY(-100%)
+                    transition: all .3s ease-in-out
+                  .pp2
+                    opacity: 0
+                    transform: translateY(100%)
+                    transition: all .3s ease-in-out
+                  hr
+                    opacity: 0
+                    transform: translateX(-100%)
+                    transition: all .3s ease-in-out
+  #contact
+    width: 100%
+    background: url(../img/bgcontact.jpg)
+      size: cover
+      repeat: no-repeat
+      position: center center
+    padding: 50px 0
+    .container
+      height: 100%
+      box-shadow: rgba(0,0,0,.5) 3px 5px 5px
+      form
+        padding: 50px 80px
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,.5)
+        -webkit-backdrop-filter: blur(20px)
+        .tcontact
+          color: #fff
+          text-align: center
+        .row
+          input, textarea
+            background: rgba(0,0,0,.4)
+            color: #fff
+            text-shadow: rgba(0,0,0,.3) 1px 2px 2px
+            &.bb1
+              color: #fff
+              font-weight: bold
+  footer
+    width: 100%
+    padding: 30px 0px
+    background: #000
+    bottom: 0
+    color: #fff
+    z-index: -1
+    .container
+      .row
+        .columns
+          ul
+            list-style: none
+            li
+              a
+                color: #fff
+              a:hover
+                color: lightblue
+          form
+            input
+              color: #000
+        p
+          text-align: center

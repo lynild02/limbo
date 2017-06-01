@@ -1,0 +1,127 @@
+//output:index.php
+|<?php include '../../../m-config.php';?>
+doctype html
+html(lang='es' ng-app)
+    head
+        title LC - MacOS -Tutorials
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='description', content='Tutoriales, concejos y notas acerca de programacion en varios lenguajes, seguridad informatica, correcto uso de nuestros dispositivos y cuidado en redes sociales e internet en general.')
+        meta(name='keywords', content='limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes')
+        meta(name='author', content='Angel de jesus gomez juarez, lynild02')
+        meta(name="robots", content="index, follow")
+        meta(property="og:title" content="Limbo City PRO")
+        meta(property="og:url" content="http://limbocity.xyz")
+        meta(property="og:site_name" content="LimboCity")
+        meta(property="og:locale" content="es_ES")
+        meta(property="og:image" content="http://limbocity.xyz/img/og.png")
+        meta(property="og:image:type" content="image/png")
+        meta(property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!")
+        //- ----- link website ----- //
+        link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
+
+        //- ----- CSS Files ----- //
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/normalize.css')
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/skeleton.css')
+        link(rel='stylesheet', href='css/master.min.css')
+        link(rel='stylesheet', href!='<?=$serv?>node_modules/loaders.css/loaders.min.css')
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300')
+        
+        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js')
+        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js')
+        
+    body.page-overview
+      .loader-c
+        .loader
+          .ball-scale-multiple
+      header
+        nav
+          ul
+            li Inicio
+              a(href!='<?=$serv?>')
+            li Portafolio
+              a(href!='<?=$serv?>/pages/p')
+            li Tutoriales
+              a(href!='<?=$serv?>/pages/t')
+            li Dibujo y mas
+              a(href!='<?=$serv?>/pages/a')
+            li Acerda de...
+              a(href!='<?=$serv?>/pages/h')
+      #initm
+        h3.dotmac MacOS
+        hr
+        h2 Seguridad, estabilidad, diseño y usabilidad... hablemos de Manzanas <span></span>
+        p Ten presente que puedes enviar un mensaje siempre que quieras a <a href='mailto:info@limbocity.xyz'>este correo</a> o nuestras <a href='<?=$serv?>social'>redes sociales</a>, para hacer cualquier petición.
+      #pub
+      //- ---- Aqui proceso de presentacion 3 principales ---- //
+      |<?php
+      |  $query="SELECT * FROM tmac ORDER BY date DESC";
+      |  $do = $tconexion->query($query);
+      |?>
+      //- ---- Bucle ---- //
+      .grid#container
+        |<?php while($row=$do->fetch_assoc()){ ?>
+        //- ---- All elements grid-item class ---- -//
+        div.grid-sizer
+        div.grid-item
+          img.lazy(src!='data:image/png;base64,<?php echo base64_encode($row["img"]);?>', title="title", alt="alt", attr)
+          figcaption <?php echo $row['title'];?>
+          a(href='#' title!="<?php echo $row['title'];?>")
+        |<?php } ?>
+      footer
+        article.container
+          .row
+            .columns.three
+              ul
+                li
+                  a(href='#') About Us
+                li
+                  a(href='#') About ME
+                li
+                  a(href='#') Privacidad
+                li
+                  a(href='#') Responsabilidad
+            .columns.three
+              ul
+                li
+                  a(href='https://www.facebook.com/limbocity/' title='Facebook' target='_blank') Facebook
+                li
+                  a(href='#') Twitter
+                li
+                  a(href='#') Google +
+                li
+                  a(href='https://www.behance.net/lynild02' target='_blank') Behance
+            .columns.six#mc_embed_signup
+              p <strong>Suscribete para recibir actualizaciones</strong> Recibe las noticias y mensajes lo mas pronto posible.
+              form.row#mc-embedded-subscribe-form(action="//xyz.us12.list-manage.com/subscribe/post?u=1f3f3272787af7763f0467cdd&amp;id=b2c233b12a" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+                .columns.eight
+                  input.u-full-width.email#mce-EMAIL(type="email" value="" name="EMAIL" placeholder="Correo Electronico" required)
+                div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                  input(type="text" name="b_1f3f3272787af7763f0467cdd_b2c233b12a" tabindex="-1" value="")
+                .columns.four
+                  input.button-primary#mc-embedded-subscribe.button(type='submit' name="subscribe" value='Suscribir')
+          .row
+            p.indief.i Creado por <strong>Angel de Jesus Gomez Juarez, Lynild</strong>. <strong>Limbo City 2017</strong>
+    //- ----- SCRIPTS ----- -//
+    script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/loaders.css/loaders.css.js' async='async')
+    link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/masonry-layout/dist/masonry.pkgd.min.js' async='async')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/imagesloaded/imagesloaded.pkgd.min.js' async='async')
+    script(type='text/javascript', src='js/main.js' async='async')
+    script.
+      $(document).ready(function(){
+        $("img.lazy").lazyload();
+        $('#fullpage').fullpage();
+      });
+    link(rel='stylesheet', href!='<?=$serv?>css/font.css')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-70395856-1', 'auto');
+      ga('send', 'pageview');

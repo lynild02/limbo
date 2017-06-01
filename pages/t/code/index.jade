@@ -48,7 +48,9 @@ html(lang='es' ng-app)
             li Acerda de...
               a(href!='<?=$serv?>/pages/h')
       #initm
-        h3 Aprendamos algo nuevo... por lo menos eso espero :v
+        h3.dot Code
+        hr
+        h2 Aprendamos algo nuevo... por lo menos eso espero :v
         p Ten presente que puedes enviar un mensaje siempre que quieras a <a href='mailto:info@limbocity.xyz'>este correo</a> o nuestras <a href='<?=$serv?>social'>redes sociales</a>, para hacer cualquier petición.
       #pub
       //- ---- Aqui proceso de presentacion 3 principales ---- //
@@ -62,9 +64,9 @@ html(lang='es' ng-app)
         //- ---- All elements grid-item class ---- -//
         div.grid-sizer
         div.grid-item
-          img.lazy(src!='data:image/png;base64,<?php echo base64_encode($row["img"]);?>', title="title", alt="alt", attr)
+          img.lazy(src!='data:image/png;base64,<?php echo base64_encode($row["img"]);?>', title!="<?php echo $row['title'];?>", alt!="<?php echo $row['title'];?>", attr)
           figcaption <?php echo $row['title'];?>
-          a(href='#' title!="<?php echo $row['title'];?>")
+          a(href!="<?php echo $row['lnk'];?>", title!="<?php echo $row['title'];?>")
         |<?php } ?>
       footer
         article.container
@@ -115,3 +117,11 @@ html(lang='es' ng-app)
         $('#fullpage').fullpage();
       });
     link(rel='stylesheet', href!='<?=$serv?>css/font.css')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-70395856-1', 'auto');
+      ga('send', 'pageview');

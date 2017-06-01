@@ -6,11 +6,16 @@ html(lang='es')
         title Portafolio - Limbo City
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-        meta(name='description', content='description')
-        meta(name='keywords', content='keywords')
-        meta(name='author', content='author')
+        meta(name='description', content='Portafolio - Los trabajos de diseño y programacion Web que hemos realizado, ademas de algunos projectos personales y mas')
+        meta(name='keywords', content='limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes,portafolio,trabajos,clientes,empresas,asociaciones')
+        meta(name='author', content='Angel de jesus gomez juarez, lynild02')
         meta(name="robots", content="index, follow")
-
+        meta(property="og:title" content="Limbo City PRO - Portafolio")
+        meta(property="og:url" content="http://limbocity.xyz/pages/p")
+        meta(property="og:site_name" content="LimboCity")
+        meta(property="og:locale" content="es_ES")
+        meta(property="og:image" content="http://limbocity.xyz/img/og.png")
+        meta(property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!")
         //- ----- link website ----- //
         link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
 
@@ -23,6 +28,7 @@ html(lang='es')
 
         //- ---- JS Files ---- //
         script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js')
+        script(type='text/javascript', src!='<?=$serv?>js/contact.js')
         
     body.page-overview(onload = "funcion($('.loader-c').fadeOut('slow'))")
       //- ---- First ---- //
@@ -47,7 +53,7 @@ html(lang='es')
             span Portafolio
             hr
             h4 Por que los hechos cuentan mas que las palabras.
-        .section.asect
+        .section.asect.ahbd
           .title.black
             span.ring All Happy By Design
             p.
@@ -77,22 +83,80 @@ html(lang='es')
             h2.hunt Todos mis proyectos
             p.indief.i All my projects
             p.indief Todos los projectos de mi portafolio, para clientes fisicos/reales y proyectos personales en proceso o proyectos experimentales.<br><span class='indief i'>Beware, Genius at Work :v</span>
-          .c-fig
-            |<?php
-            |  $query="SELECT * FROM projects ORDER BY date ASC";
-            |  $do = $conexion->query($query);
-            |?>
-            //- ---- Bucle ---- //
-            |<?php while($row=$do->fetch_assoc()){ ?>
-            figure.close
-              img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
-              figcaption
-                #c-text
-                  p.tt <?php echo $row['title'];?>
+          .c-fig.wrapp
+            .cfigt
+              |<?php
+              |  $query="SELECT * FROM projects ORDER BY date ASC";
+              |  $do = $conexion->query($query);
+              |?>
+              //- ---- Bucle ---- //
+              |<?php while($row=$do->fetch_assoc()){ ?>
+              figure.close
+                img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
+                figcaption
+                  #c-text
+                    p.tt <?php echo $row['title'];?>
+                    hr
+                    p.pp2 view
+                a(href!="<?php echo $row['url'];?>", target='_blank')
+              |<?php } ?>
+          //- ----- Contak ----- -//
+          #contact.wrapp
+            article.container
+              form#ajax-form(action!='<?=$serv?>mail-it.php' method="post" name="ajax-form")
+                .tcontact
+                  h2 Contacto
+                  p.
+                    Contactame directamente para cualquier cosa!
+                    Correo:&nbsp;<a href='mailto:info@limbocity.xyz'>info@limbocity.xyz</a>&nbsp;Tel:&nbsp;<a href='tel:+522431162653'>+52 243 1162653</a>
                   hr
-                  p.pp2 view
-              a(href!="<?php echo $row['url'];?>", target='_blank')
-            |<?php } ?>
+                  p.
+                    Información&nbsp;&mdash;&nbsp;Pedidos&nbsp;&mdash;&nbsp;Cotizaciones
+                .row
+                  input.u-full-width(type='text' id='name' name='name' placeholder='Nombre')
+                  input.u-full-width(type='email' id='email' name='mail' placeholder='E-mail')
+                  input.u-full-width(type="text" id='tel' name="tel" placeholder="Telefono")
+                  textarea.u-full-width(name="message" rows="3" cols="40" placeholder='Mensaje')
+                  input.columns.eleven.bb1.send.send_message(type='submit' value='Enviar')
+                  div#err-form.error.u-full-width Ha habido un problema al validar el formulario.<br/>Revisa que los datos sean correctos y que hallas llenado todos los campos
+                  div#err-timedout.error.u-full-width Error de conexion con el Servidor!
+                  div#err-state.error.u-full-width Simplemente algo salio MAL :(
+              div(id="ajaxsuccess") Mensaje Enviado!<br><hr><br><span class='ops'>Ooops!<br>;D</span>
+          footer
+            article.container
+              .row
+                .columns.three
+                  ul
+                    li
+                      a(href='#') About Us
+                    li
+                      a(href='#') About ME
+                    li
+                      a(href='#') Privacidad
+                    li
+                      a(href='#') Responsabilidad
+                .columns.three
+                  ul
+                    li
+                      a(href='https://www.facebook.com/limbocity/' title='Facebook' target='_blank') Facebook
+                    li
+                      a(href='#') Twitter
+                    li
+                      a(href='#') Google +
+                    li
+                      a(href='https://www.behance.net/lynild02' target='_blank') Behance
+                .columns.six#mc_embed_signup
+                  p <strong>Suscribete para recibir actualizaciones</strong> Recibe las noticias y mensajes lo mas pronto posible.
+                  form.row#mc-embedded-subscribe-form(action="//xyz.us12.list-manage.com/subscribe/post?u=1f3f3272787af7763f0467cdd&amp;id=b2c233b12a" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+                    .columns.eight
+                      input.u-full-width.email#mce-EMAIL(type="email" value="" name="EMAIL" placeholder="Correo Electronico" required)
+                    div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                      input(type="text" name="b_1f3f3272787af7763f0467cdd_b2c233b12a" tabindex="-1" value="")
+                    .columns.four
+                      input.button-primary#mc-embedded-subscribe.button(type='submit' name="subscribe" value='Suscribir')
+              .row
+                p.indief.i Creado por <strong>Angel de Jesus Gomez Juarez, Lynild</strong>. <strong>Limbo City 2017</strong>
+    //- ---- SCRIPTS ---- -//
     script(type='text/javascript', src!='<?=$serv?>js/functions.js' )
     script(type='text/javascript', src='js/main.js' )
     script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js' )
@@ -100,8 +164,17 @@ html(lang='es')
     link(rel='stylesheet', href!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css')
     script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js' )
     script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js' )
+    link(rel='stylesheet', href!='<?=$serv?>css/form.min.css')
     script.
       $(document).ready(function(){
         $('#fullpage').fullpage();
       });
     link(rel='stylesheet', href!='<?=$serv?>css/font.css')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-70395856-1', 'auto');
+      ga('send', 'pageview');

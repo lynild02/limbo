@@ -4,10 +4,17 @@
     <title>LC - Tutoriales</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="description">
-    <meta name="keywords" content="keywords">
-    <meta name="author" content="author">
+    <meta name="description" content="Tutoriales, concejos y notas acerca de programacion en varios lenguajes, seguridad informatica, correcto uso de nuestros dispositivos y cuidado en redes sociales e internet en general.">
+    <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes">
+    <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Limbo City PRO">
+    <meta property="og:url" content="http://limbocity.xyz">
+    <meta property="og:site_name" content="LimboCity">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="http://limbocity.xyz/img/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
@@ -27,7 +34,7 @@
       <nav>
         <ul>
           <li>Inicio<a href="../../"></a></li>
-          <li>Tutoriales<a href="../t"></a></li>
+          <li>Portafolio<a href="../p"></a></li>
           <li>Dibujo y mas<a href="../a"></a></li>
           <li>Acerda de...<a href="../h"></a></li>
         </ul>
@@ -103,4 +110,13 @@
     });
   </script>
   <link rel="stylesheet" href="<?=$serv?>css/font.css">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-70395856-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </html>

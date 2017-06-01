@@ -1,0 +1,26 @@
+//output:add.php
+script.
+  $('.wrapp').css({'background':'url(img/bg2.png)','background-size':'cover','background-position':'center center','background-repeat':'no-repeat'});
+div.add-div(ng-controller="selCtrl" class="md-padding" ng-cloak layout="column")
+  article.container
+    h2 Let's write an Article. Ready?
+    form(action='end/adding.php' method='post' id='add-form' name='add-form')
+      .row
+        select.columns.six(select ng-model="selectedName" ng-options="x for x in names" name='table')
+          option(value='' selected) -- Select One --
+        span.columns.six.tip Your article will be posted on {{selectedName}}.
+      .row
+        input.columns.six(type='text' name='title-art' placeholder='Titulo')
+        input.columns.six(type='text' name='description' placeholder='description')
+      .row
+        div.columns.three
+          input.u-full-width(type='file' name='img' class='jfilestyle' data-theme='blue' data-input='false' data-buttonText='Header Image')
+        div.columns.three
+          input.u-full-width(type='file' name='img2' class='jfilestyle' data-theme='blue' data-input='false' data-buttonText='Body Image')
+        input.no-view(type='date' ng-controller='currentDate' value="{{currD | date:'dd-mm-yy'}}" ApplyInEditMode='true' name='date')
+      .row
+        textarea.u-full-width(name='body')
+      .row
+        input.columns.four(type='text' placeholder="Who's writting?" name='nau')
+        input.columns.four(type='text' placeholder="Writter's Info" name='iau')
+        input.columns.four.button-primary(type='submit' value='Postear' name='send')

@@ -1,0 +1,278 @@
+//fonts
+$opensans: 'Open Sans Condensed', sans-serif
+$indief: 'Indie Flower', cursive
+$amatic: 'Amatic SC', cursive
+$josefine: 'Josefin Slab', serif
+$oldstandart: 'Old Standard TT', serif
+$ringlead: 'Ringlead'
+$raspberry: 'Raspberry'
+$other: 'Other'
+$gloss: 'glossnbloom'
+$sanf: 'sanf'
+*
+  box-sizing: border-box
+figure
+  margin: auto
+img
+  max-width: 100%
+a
+  text-decoration: none
+  &:hover
+    color: purple
+figure.rr
+  position: relative
+  overflow: hidden
+  img
+    width: auto
+    height: auto
+    min-width: 100%
+    display: block
+.CName
+  font-weight: bold
+//General
+.indief
+  font-family: $josefine
+  margin-bottom: 0
+  font-size: 1.6em
+  &.i
+    font-size: .8em
+    font-style: italic
+    margin-bottom: 20px
+.hunt
+  font-family: 'huntress'
+  text-transform: uppercase
+  text-align: center
+.black
+  color: #000 !important
+//Origin
+.page-overview
+  font-family: $sanf
+  .loader-c
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    z-index: 11
+    transition: all .5s ease-in-out
+    .loader
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 12
+  article.container
+    box-shadow: rgba(0,0,0,.3) 2px 5px 5px
+    padding: 20px 0
+    header
+      width: 100%
+      position: relative
+      height: auto
+      padding: 0 10px
+      #logo
+        width: 100%
+        min-height: 100px
+        background: url(../img/lclogo.png)
+          position: left center
+          size: contain
+          repeat: no-repeat
+        margin-bottom: 5px
+      nav
+        width: 100%
+        padding: 5px 0
+        position: relative
+        border-bottom: 1px solid #d2d2d2
+        border-top: 1px solid #d2d2d2
+        margin: 10px 0
+        ul
+          width: 100%
+          height: 100%
+          display: table
+          table-layout: fixed
+          margin: 0
+          li
+            position: relative
+            display: table-cell
+            width: 100%
+            margin: 0
+            height: 100%
+            text-align: center
+            vertical-align: middle
+            font-weight: bold
+            transform: translate(0)
+            transition: all .3s ease-in-out
+            &:hover
+              transform: translateY(-4px)
+              color: red
+              transition: all .3s ease-in-out
+            a
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+      .section-soc
+        width: 100%
+        height: 50px
+        border-bottom: 1px solid #d2d2d2
+    .title-space
+      width: 100%
+      height: auto
+      min-height: 200px
+      padding: 20px
+      h3
+        font-family: $sanf, sans-serif
+        font-weight: bolder
+      p
+        .auth
+          font-weight: bold
+    .all-body
+      width: 100%
+      height: auto
+      position: relative
+      .main-content
+        width: 70%
+        height: auto
+        display: inline-block
+        float: left
+        padding: 0 20px
+        border-right: 1px solid #d2d2d2
+        .body
+          border-bottom: 1px solid #d2d2d2
+          .img-container
+            padding: 5px
+            width: 100%
+            height: auto
+            border-bottom: 1px solid #d2d2d2
+            img
+              width: 100%
+              height: auto
+              margin: 0
+          .fast-description
+            text-align: center
+          p
+            text-align: justify
+          span.bld
+            font-weight: bold
+          span.i
+            font-size: .8em
+            font-style: italic
+          blockquote
+            padding-left: 20px
+            width: 100%
+            q
+              text-align: left
+          video
+            width: 100%
+            height: auto
+          iframe
+            width: 100% !important
+            text-align: center !important
+            margin: 0 !important
+            padding: 0 !important
+            display: block
+        .author-f
+          width: 100%
+          min-height: 195px
+          border-bottom: 1px solid #d2d2d2
+          .img-c
+            width: 30%
+            height: 100%
+            padding: 3px
+            display: inline-block
+            float: left
+            position: relative
+            img
+              width: 100%
+              height: 100%
+          .inf-c
+            width: 70%
+            height: 100%
+            display: inline-block
+            float: left
+            padding: 5px
+            span.nau
+              a
+                font-weight: bold
+            p
+              text-align: left
+              &.tt
+                font-weight: bold
+        .last-art
+          width: 100%
+          height: auto
+          border-bottom: 1px solid #d2d2d2
+          margin: 5px 0
+          .row
+            .samehw
+              position: relative
+              figure
+                width: 100%
+                height: auto
+                min-height: 230px
+                overflow: hidden
+                .img-cc
+                  width: 100%
+                  height: 200px
+                  overflow: hidden
+                  img
+                    width: auto
+                    min-width: 100%
+                    min-height: 100%
+                figcaption
+                  width: auto
+                  height: 100%
+                  text-align: left
+                  font-weight: bold
+                  text-transform: uppercase
+                  font-family: $josefine
+                a
+                  position: absolute
+                  top: 0
+                  left: 0
+                  right: 0
+                  bottom: 0
+      .second-content
+        padding: 5px
+        width: 30%
+        display: inline-block
+        float: left
+        .publc
+          width: 100%
+          height: auto
+          position: relative
+        .notes
+          .row
+            figure
+              width: 100%
+              .img-scc
+              figcaption
+                font-weight: bold
+                font-family: $amatic
+              a
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+  footer
+    position: relative
+    width: 100%
+    background: #000
+    color: #fff
+    .container
+      .row
+        .columns
+          ul
+            list-style: none
+            li
+              a
+                color: #fff
+              a:hover
+                color: lightblue
+          form
+            input
+              color: #000
+        p
+          text-align: center

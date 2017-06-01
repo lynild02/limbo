@@ -1,0 +1,9 @@
+//output:login.php
+div(ng-controller='loginCtrl')
+  h3 So, if you aren't a LCWebmaster, what the hell r u doing HERE?
+  form.log(action='/' id='myLogin')
+    .cont
+      input.u-full-width(type='text' id='username' placeholder='Nickname' ng-model='username')
+      input.u-full-width(type='password' id='password' placeholder='Password' ng-model='password')
+      button.u-full-width(type='button' ng-click='submit()' value='Login') Login
+      h4 Hola {{username}}!
