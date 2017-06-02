@@ -4,18 +4,18 @@ div(class='dash' ng-controller='dashCtrl')
     h2 Hello! What do you like to do right now?
     .row
       figure.columns.three.rr(type='button' ng-model='add' ng-click='myaddSubmit()')
-        img.lazy(data-original='img/004-file.svg')
+        img(src='img/004-file.svg')
         figcaption
           h4 Añadir archivo
       figure.columns.three.rr(type='button' ng-model='addf' ng-click='myaddfSubmit()')
-        img.lazy(data-original='img/001-inbox.svg')
+        img(src='img/001-inbox.svg')
         figcaption
           h4 Am. Archivos
       figure.columns.three.rr(type='button' ng-model='usr' ng-click='usrSubmit()')
-        img.lazy(data-original='img/003-users.svg')
+        img(src='img/003-users.svg')
         figcaption
           h4 Am. Usuarios
       figure.columns.three.rr(type='button' ng-model='sett' ng-click='settSubmit()')
-        img.lazy(data-original='img/002-settings.svg')
+        img(src='img/002-settings.svg')
         figcaption
           h4 Settings

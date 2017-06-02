@@ -1,5 +1,6 @@
 *
   box-sizing: border-box
+$lounge: #d3394c
 figure
   margin: auto
 img
@@ -87,15 +88,28 @@ h2
           article.container
             form
               .row
-                input, select, textarea
+                input, select
                   background: rgba(255,255,255,.7)
                   -webkit-backdrop-filter: blur(20px)
                   border: none
                   color: #000
                   text-shadow: rgba(0,0,0,.3) 2px 3px 3px
+                label.i1
+                  padding: 10px
+                  background: $lounge
+                  text-align: center
+                  color: #fff
+                  font-size: 1.7em
+                  svg
+                    fill: currentColor
+                    width: 1em
+                    height: 1em
+                    margin-right: 10px
+                button
+                  color: #fff
                   transition: all .3s ease-in-out
                   &.button-primary:hover
-                    color: red
+                    color: #fff
                     background: rgba(0,0,0,.7)
                     transition: all .3s ease-in-out
                 span.tip
@@ -103,3 +117,6 @@ h2
                   text-shadow: rgba(0,0,0,.3) 2px 3px 3px
                   font-size: 1.3em
                   text-align: left
+                  b
+                    color: $lounge
+                    text-transform: uppercase

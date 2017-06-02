@@ -64,9 +64,9 @@ html(lang='es' ng-app)
         //- ---- All elements grid-item class ---- -//
         div.grid-sizer
         div.grid-item
-          img.lazy(src!='data:image/png;base64,<?php echo base64_encode($row["img"]);?>', title="title", alt="alt", attr)
+          img.lazy(src!='<?php echo $row["img"];?>', title="title", alt="alt", attr)
           figcaption <?php echo $row['title'];?>
-          a(href='#' title!="<?php echo $row['title'];?>")
+          a(href!='<?php echo $row["lnk"];?>' title!="<?php echo $row['title'];?>")
         |<?php } ?>
       footer
         article.container

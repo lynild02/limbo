@@ -53,8 +53,8 @@
     ?>
     <div id="container" class="grid"><?php while($row=$do->fetch_assoc()){ ?>
       <div class="grid-sizer"></div>
-      <div class="grid-item"><img src="data:image/png;base64,<?php echo base64_encode($row["img"]);?>" title="title" alt="alt" attr class="lazy">
-        <figcaption><?php echo $row['title'];?></figcaption><a href="#" title="<?php echo $row['title'];?>"></a>
+      <div class="grid-item"><img src="<?php echo $row["img"];?>" title="title" alt="alt" attr class="lazy">
+        <figcaption><?php echo $row['title'];?></figcaption><a href="<?php echo $row["lnk"];?>" title="<?php echo $row['title'];?>"></a>
       </div><?php } ?>
     </div>
     <footer>

@@ -46,7 +46,7 @@ figure.rr
   color: #000 !important
 //Origin
 .page-overview
-  font-family: $sanf
+  font-family: sans-serif
   .loader-c
     position: fixed
     top: 0
@@ -121,6 +121,7 @@ figure.rr
       height: auto
       min-height: 200px
       padding: 20px
+      border-bottom: 1px solid #d2d2d2 
       h3
         font-family: $sanf, sans-serif
         font-weight: bolder
@@ -140,65 +141,13 @@ figure.rr
         border-right: 1px solid #d2d2d2
         .body
           border-bottom: 1px solid #d2d2d2
-          .img-container
-            padding: 5px
-            width: 100%
-            height: auto
-            border-bottom: 1px solid #d2d2d2
-            img
-              width: 100%
-              height: auto
-              margin: 0
-          .fast-description
+          //Aqui CSS para Ng-View
+          h1,h2,h3,h4,h5
             text-align: center
-          p
-            text-align: justify
-          span.bld
-            font-weight: bold
-          span.i
-            font-size: .8em
-            font-style: italic
-          blockquote
-            padding-left: 20px
             width: 100%
-            q
-              text-align: left
-          video
-            width: 100%
-            height: auto
-          iframe
-            width: 100% !important
-            text-align: center !important
-            margin: 0 !important
-            padding: 0 !important
-            display: block
-        .author-f
-          width: 100%
-          min-height: 195px
-          border-bottom: 1px solid #d2d2d2
-          .img-c
-            width: 30%
-            height: 100%
-            padding: 3px
-            display: inline-block
-            float: left
             position: relative
-            img
-              width: 100%
-              height: 100%
-          .inf-c
-            width: 70%
-            height: 100%
-            display: inline-block
-            float: left
-            padding: 5px
-            span.nau
-              a
-                font-weight: bold
-            p
-              text-align: left
-              &.tt
-                font-weight: bold
+
+          //FIN
         .last-art
           width: 100%
           height: auto
@@ -244,12 +193,24 @@ figure.rr
           position: relative
         .notes
           .row
-            figure
+            figure.secondrr
               width: 100%
+              max-height: 250px
+              overflow: hidden
+              margin-bottom: 10px
+              border: solid 1px #d2d2d2
               .img-scc
+                width: 100%
+                height: 100px
+                overflow: hidden
               figcaption
+                width: 100%
+                height: auto
                 font-weight: bold
                 font-family: $amatic
+                background: #000
+                color: #fff
+                text-align: center
               a
                 position: absolute
                 top: 0

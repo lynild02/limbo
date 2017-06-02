@@ -4,14 +4,6 @@
 |$id  = evaluar($_GET['id']);
 |$cdb  = $tconexion->query("SELECT * FROM tnotes WHERE id=$id");
 |$row = $cdb->fetch_assoc();
-|$tl=$row['title'];
-|$au=$row['author'];
-|$dt=$row['date'];
-|$fdesc=$row['fdesc'];
-|$adesc=$row['descripton'];
-|$iau=$row['iau'];
-|$nau=$row['nau'];
-|$mau=$row['mau'];
 |?>
 doctype html
 html(lang='es')
@@ -63,30 +55,37 @@ html(lang='es')
                 a(href!='<?=$serv?>/pages/h')
           .section-soc
         .title-space
-          h3 <?=$tl?>
+          //- --- TITULO --- -//
+          h3 <? echo $row['title'];?>
           p.
-            Por&nbsp;<span class='auth'><?=$au?></span>&nbsp;&mdash;&nbsp;<?=$dt?>
+            Por&nbsp;<span class='auth'><? echo $row['nau'];?></span>&nbsp;&mdash;&nbsp;<? echo $row['date'];?>
         .all-body
           .main-content
             .body
               .img-container
-                img.lazy(data-original!="data:image/png;base64,<?php echo base64_encode($row['img']);?>")
+                //- --- IMAGE PRINCIPAL --- -//
+                img.lazy(data-original!="<?php echo $row['img'];?>")
               .fast-description
+                //- --- DESCRIPCION --- -//
                 p.
-                  <?=$fdesc?>
-              h3 <?=$tl?>
+                  <? echo $row['description'];?>
+              //- --- TITULO --- -//
+              h3 <? echo $row['title'];?>
+              //- --- BODY --- -//
               div
-                <?=$adesc?>
-            .author-f    
+                <? echo $row['body'];?>
+            //- --- CUADRO DE AUTOR --- -//
+            .author-f
               .img-c
-                img.lazy(data-original!='<?=$imgau?>')
+                img.lazy(data-original!='<? echo $row["imgusr"];?>')
               .inf-c
                 span.nau
-                  a(href!='<?=$nau?>') <?=$nau?><br>
+                  a(href!='<? echo $row["lau"];?>') <? echo $row['nau'];?><br>
                 p.
-                  <?=$iau?>
+                  <? echo $row['iau'];?>
                 p.tt
-                  a(href!='<?=$mau?>') <?=$mau?>&nbsp;&mdash;&nbsp;
+                  a(href!='<? echo $row["mau"];?>') <? echo $row['mau'];?>&nbsp;&mdash;&nbsp;
+            //- --- ULTIMOS ARTICULOS --- -//
             .last-art
               .row
                 //- ---- Aqui proceso de presentacion 3 principales ---- //
@@ -99,9 +98,9 @@ html(lang='es')
                 div.columns.four.samehw
                   figure.rr
                     .img-cc
-                      img.lazy(data-original!="data:image/png;base64,<?php echo base64_encode($row['img']);?>")
-                    figcaption <?php echo $row['title'];?>
-                    a(href!="<?php echo $row['lnk'];?>", title!="<?php echo $row['title'];?>")
+                      img(src!="<? echo $row['img'];?>")
+                    figcaption <? echo $row['title'];?>
+                    a(href!="<? echo $row['lnk'];?>", title!="<? echo $row['title'];?>")
                 |<?php } ?>
             #disqus_thread
               script.
@@ -122,7 +121,7 @@ html(lang='es')
                 })();
               noscript.
                 Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-              
+          //- --- SECOND *NOTAS A HUEVO*--- -//
           .second-content
             .publc
             .notes
@@ -134,11 +133,11 @@ html(lang='es')
                 |?>
                 //- ---- Bucle ---- //
                 |<?php while($row=$doo->fetch_assoc()){ ?>
-                figure.rr
+                figure.rr.secondrr
                   .img-scc
-                    img(src!="data:image/png;base64,<?php echo base64_encode($row['img']);?>")
-                  figcaption <?php echo $row['title'];?>
-                  a(href!="../notes/<?php echo $row['lnk'];?>", title!="<?php echo $row['title'];?>")
+                    img(src!="<?php echo $row['img'];?>")
+                  figcaption <? echo $row['title'];?>
+                  a(href!="../notes/<? echo $row['lnk'];?>", title!="<? echo $row['title'];?>")
                 |<?php } ?>
       footer
         article.container
@@ -182,6 +181,7 @@ html(lang='es')
     script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js')
     script(type='text/javascript', src='../js/view.js' async='async')
     script(id="dsq-count-scr" src="//limbo-city.disqus.com/count.js" async)
+    script(src='http://ogoser.com/tools/js/custom-file-input.js' async)
     script.
       $(document).ready(function(){
         $("img.lazy").lazyload();

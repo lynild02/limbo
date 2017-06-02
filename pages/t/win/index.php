@@ -42,9 +42,9 @@
       </nav>
     </header>
     <div id="initm">
-      <h3 class="dot">Code</h3>
+      <h3 class="dot">Windows</h3>
       <hr>
-      <h2>El SO mas usado en el mundo, usemoslo BIEN!</h2>
+      <h2>El 'SO' mas usado en el mundo, usemoslo BIEN!</h2>
       <p>Ten presente que puedes enviar un mensaje siempre que quieras a <a href='mailto:info@limbocity.xyz'>este correo</a> o nuestras <a href='<?=$serv?>social'>redes sociales</a>, para hacer cualquier petición.</p>
     </div>
     <div id="pub"></div><?php
@@ -54,7 +54,7 @@
     <div id="container" class="grid"><?php while($row=$do->fetch_assoc()){ ?>
       <div class="grid-sizer"></div>
       <div class="grid-item"><img src="data:image/png;base64,<?php echo base64_encode($row["img"]);?>" title="title" alt="alt" attr class="lazy">
-        <figcaption><?php echo $row['title'];?></figcaption><a href="#" title="<?php echo $row['title'];?>"></a>
+        <figcaption><?php echo $row['title'];?></figcaption><a href="<?php echo $row["lnk"];?>" title="<?php echo $row['title'];?>"></a>
       </div><?php } ?>
     </div>
     <footer>

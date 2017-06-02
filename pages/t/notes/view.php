@@ -4,14 +4,6 @@ include '../../../m-config.php';
 $id  = evaluar($_GET['id']);
 $cdb  = $tconexion->query("SELECT * FROM tnotes WHERE id=$id");
 $row = $cdb->fetch_assoc();
-$tl=$row['title'];
-$au=$row['author'];
-$dt=$row['date'];
-$fdesc=$row['fdesc'];
-$adesc=$row['descripton'];
-$iau=$row['iau'];
-$nau=$row['nau'];
-$mau=$row['mau'];
 ?><!DOCTYPE html>
 <html lang="es">
   <head>
@@ -58,24 +50,25 @@ $mau=$row['mau'];
         <div class="section-soc"></div>
       </header>
       <div class="title-space">
-        <h3><?=$tl?></h3>
-        <p>Por&nbsp;<span class='auth'><?=$au?></span>&nbsp;&mdash;&nbsp;<?=$dt?></p>
+        <h3><? echo $row['title'];?></h3>
+        <p>Por&nbsp;<span class='auth'><? echo $row['nau'];?></span>&nbsp;&mdash;&nbsp;<? echo $row['date'];?></p>
       </div>
       <div class="all-body">
         <div class="main-content">
           <div class="body">
-            <div class="img-container"><img data-original="data:image/png;base64,<?php echo base64_encode($row['img']);?>" class="lazy"></div>
-            <div class="fast-description">
-              <p><?=$fdesc?></p>
+            <div class="img-container"><img data-original="<?php echo $row['img'];?>" class="lazy">
             </div>
-            <h3><?=$tl?></h3>
-            <div><?=$adesc?></div>
+            <div class="fast-description">
+              <p><? echo $row['description'];?></p>
+            </div>
+            <h3><? echo $row['title'];?></h3>
+            <div><? echo $row['body'];?></div>
           </div>
-          <div class="author-f">   
-            <div class="img-c"><img data-original="<?=$imgau?>" class="lazy"></div>
-            <div class="inf-c"><span class="nau"><a href="<?=$nau?>"><?=$nau?><br></a></span>
-              <p><?=$iau?></p>
-              <p class="tt"><a href="<?=$mau?>"><?=$mau?>&nbsp;&mdash;&nbsp;</a></p>
+          <div class="author-f">
+            <div class="img-c"><img data-original="<? echo $row["imgusr"];?>" class="lazy"></div>
+            <div class="inf-c"><span class="nau"><a href="<? echo $row["lau"];?>"><? echo $row['nau'];?><br></a></span>
+              <p><? echo $row['iau'];?></p>
+              <p class="tt"><a href="<? echo $row["mau"];?>"><? echo $row['mau'];?>&nbsp;&mdash;&nbsp;</a></p>
             </div>
           </div>
           <div class="last-art">
@@ -85,8 +78,8 @@ $mau=$row['mau'];
               ?><?php while($row=$do->fetch_assoc()){ ?>
               <div class="columns four samehw">
                 <figure class="rr">
-                  <div class="img-cc"><img data-original="data:image/png;base64,<?php echo base64_encode($row['img']);?>" class="lazy"></div>
-                  <figcaption><?php echo $row['title'];?></figcaption><a href="<?php echo $row['lnk'];?>" title="<?php echo $row['title'];?>"></a>
+                  <div class="img-cc"><img src="<? echo $row['img'];?>"></div>
+                  <figcaption><? echo $row['title'];?></figcaption><a href="<? echo $row['lnk'];?>" title="<? echo $row['title'];?>"></a>
                 </figure>
               </div><?php } ?>
             </div>
@@ -109,10 +102,7 @@ $mau=$row['mau'];
               (d.head || d.body).appendChild(s);
               })();
             </script>
-            <noscript>
-              Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-              
-            </noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
           </div>
         </div>
         <div class="second-content">
@@ -122,9 +112,9 @@ $mau=$row['mau'];
                $quer="SELECT * FROM tnotes ORDER BY date DESC LIMIT 0, 3";
                $doo = $tconexion->query($quer);
               ?><?php while($row=$doo->fetch_assoc()){ ?>
-              <figure class="rr">
-                <div class="img-scc"><img src="data:image/png;base64,<?php echo base64_encode($row['img']);?>"></div>
-                <figcaption><?php echo $row['title'];?></figcaption><a href="../notes/<?php echo $row['lnk'];?>" title="<?php echo $row['title'];?>"></a>
+              <figure class="rr secondrr">
+                <div class="img-scc"><img src="<?php echo $row['img'];?>"></div>
+                <figcaption><? echo $row['title'];?></figcaption><a href="../notes/<? echo $row['lnk'];?>" title="<? echo $row['title'];?>"></a>
               </figure><?php } ?>
             </div>
           </div>
@@ -177,6 +167,7 @@ $mau=$row['mau'];
   <script type="text/javascript" src="<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js"></script>
   <script type="text/javascript" src="../js/view.js" async="async"></script>
   <script id="dsq-count-scr" src="//limbo-city.disqus.com/count.js" async></script>
+  <script src="http://ogoser.com/tools/js/custom-file-input.js" async></script>
   <script>
     $(document).ready(function(){
       $("img.lazy").lazyload();

@@ -1,0 +1,40 @@
+{
+  "name": "limbocity",
+  "version": "1.0.1",
+  "description": "Log for LimboCity Website",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "alertifyjs": "^1.10.0",
+    "angular-animate": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "angular-aria": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "fullpage.js": "^2.9.4",
+    "imagesloaded": "^4.1.2",
+    "jquery": "^3.2.1",
+    "jquery-lazyload": "^1.9.7",
+    "loaders.css": "^0.1.2",
+    "masonry-layout": "^4.2.0",
+    "particles.js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lynild02/limbo.git"
+  },
+  "keywords": [
+    "lynild",
+    "limbo",
+    "city"
+  ],
+  "author": "Angel de Jesus Gomez Juarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lynild02/limbo/issues"
+  },
+  "homepage": "https://github.com/lynild02/limbo#readme"
+}

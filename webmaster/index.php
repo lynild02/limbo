@@ -39,6 +39,8 @@
   <script src="<?=$serv?>node_modules/angular-aria/angular-aria.js"></script>
   <script src="<?=$serv?>node_modules/angular-animate/angular-animate.js"></script>
   <script src="<?=$serv?>node_modules/angular-material/angular-material.js"></script>
+  <script src="<?=$serv?>node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+  <script src="<?=$serv?>node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
   <script src="<?=$serv?>node_modules/filestyle/src/jquery-filestyle.min.js"></script>
   <link rel="stylesheet" href="<?=$serv?>node_modules/filestyle/src/jquery-filestyle.min.css">
   <script type="text/javascript" src="js/controller.js"></script>

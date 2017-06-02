@@ -48,9 +48,9 @@ html(lang='es' ng-app)
             li Acerda de...
               a(href!='<?=$serv?>/pages/h')
       #initm
-        h3.dot Code
+        h3.dot Windows
         hr
-        h2 El SO mas usado en el mundo, usemoslo BIEN!
+        h2 El 'SO' mas usado en el mundo, usemoslo BIEN!
         p Ten presente que puedes enviar un mensaje siempre que quieras a <a href='mailto:info@limbocity.xyz'>este correo</a> o nuestras <a href='<?=$serv?>social'>redes sociales</a>, para hacer cualquier petición.
       #pub
       //- ---- Aqui proceso de presentacion 3 principales ---- //
@@ -66,7 +66,7 @@ html(lang='es' ng-app)
         div.grid-item
           img.lazy(src!='data:image/png;base64,<?php echo base64_encode($row["img"]);?>', title="title", alt="alt", attr)
           figcaption <?php echo $row['title'];?>
-          a(href='#' title!="<?php echo $row['title'];?>")
+          a(href!='<?php echo $row["lnk"];?>' title!="<?php echo $row['title'];?>")
         |<?php } ?>
       footer
         article.container
