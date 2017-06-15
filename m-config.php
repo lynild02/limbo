@@ -2,14 +2,12 @@
   $server = 'localhost';
   $user = 'root';
   $pass = '';
-  $db = 'Development';
   $tdb = 'tutoriales';
-  $wbm = 'webmaster';
-  $conexion = new mysqli($server, $user, $pass, $db);
+  $pdb = 'Development';
   $tconexion = new mysqli($server, $user, $pass, $tdb);
-  $wconexion = new mysqli($server, $user, $pass, $wbm);
-  $conexion->set_charset('utf8');
-  if ($conexion->connect_errno) {
+  $tconexion->set_charset('utf8');
+  $conexion = new mysqli($server, $user, $pass, $pdb);
+  if ($tconexion->connect_errno) {
   	echo "An error has ocurred while try to connect with the DB {$conexion->connect_errno}";
   }
   $serv='/projects/limbocity/';

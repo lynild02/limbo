@@ -1,5 +1,5 @@
 window.onload = function() {
-    $('.loader-c').fadeOut('slow');
+  $('.loader-c').fadeOut('slow');
 };
 $(document).ready(function(){
   wHeight = $(window).innerHeight();
@@ -11,5 +11,4 @@ $(document).ready(function(){
     $('.w-wrapp').css({'height':wHeight*2+'px'});
   };
   $('.ball-scale-multiple').loaders();
-  //Mouse Over
 });

@@ -1,0 +1,35 @@
+[06-Jun-2017 00:22:12 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/limbocit/webmaster/end/auth.php on line 8
+[09-Jun-2017 02:53:46 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/limbocit/webmaster/end/auth.php on line 8
+[09-Jun-2017 14:24:33 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/limbocit/webmaster/end/auth.php on line 8
+[09-Jun-2017 15:16:14 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/limbocit/webmaster/end/addingh.php on line 1
+[09-Jun-2017 16:38:28 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/limbocit/webmaster/end/auth.php on line 8
+[09-Jun-2017 16:58:23 America/Chicago] PHP Parse error:  syntax error, unexpected ''<br>'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/limbocit/webmaster/end/addingh.php on line 30
+[09-Jun-2017 17:17:56 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:31:22 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:32:40 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:34:13 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:34:13 America/Chicago] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:36:53 America/Chicago] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, string given in /home/limbocit/webmaster/end/m-config.php on line 9
+[09-Jun-2017 17:36:53 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/limbocit/webmaster/end/m-config.php:9) in /home/limbocit/webmaster/end/addingh.php on line 2
+[09-Jun-2017 17:36:53 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/limbocit/webmaster/end/m-config.php:9) in /home/limbocit/webmaster/end/addingh.php on line 2
+[09-Jun-2017 17:36:53 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:38:02 America/Chicago] PHP Parse error:  syntax error, unexpected 'false' (T_STRING) in /home/limbocit/webmaster/end/addingh.php on line 2
+[09-Jun-2017 17:38:31 America/Chicago] PHP Parse error:  syntax error, unexpected 'false' (T_STRING) in /home/limbocit/webmaster/end/addingh.php on line 2
+[09-Jun-2017 17:38:56 America/Chicago] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, string given in /home/limbocit/webmaster/end/m-config.php on line 9
+[09-Jun-2017 17:38:56 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/limbocit/webmaster/end/m-config.php:9) in /home/limbocit/webmaster/end/addingh.php on line 2
+[09-Jun-2017 17:38:56 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:41:11 America/Chicago] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, object given in /home/limbocit/webmaster/end/m-config.php on line 9
+[09-Jun-2017 17:41:11 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/limbocit/webmaster/end/m-config.php:9) in /home/limbocit/webmaster/end/addingh.php on line 2
+[09-Jun-2017 17:41:11 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/limbocit/webmaster/end/addingh.php on line 38
+[09-Jun-2017 17:42:11 America/Chicago] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, object given in /home/limbocit/webmaster/end/m-config.php on line 9
+[09-Jun-2017 17:42:11 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/limbocit/webmaster/end/addingh.php on line 37
+[09-Jun-2017 17:43:08 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/limbocit/webmaster/end/addingh.php on line 37
+[09-Jun-2017 17:49:10 America/Chicago] PHP Parse error:  syntax error, unexpected '"','"' (T_CONSTANT_ENCAPSED_STRING) in /home/limbocit/webmaster/end/addingh.php on line 37
+[09-Jun-2017 18:22:41 America/Chicago] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /home/limbocit/webmaster/end/addingh.php on line 41
+[09-Jun-2017 18:24:41 America/Chicago] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /home/limbocit/webmaster/end/addingh.php on line 40
+[09-Jun-2017 18:28:43 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/limbocit/webmaster/end/addingh.php on line 40
+[09-Jun-2017 18:31:10 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, object given in /home/limbocit/webmaster/end/addingh.php on line 40
+[09-Jun-2017 18:31:18 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, object given in /home/limbocit/webmaster/end/addingh.php on line 40
+[09-Jun-2017 18:33:00 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/limbocit/webmaster/end/addingh.php on line 40
+[09-Jun-2017 18:34:11 America/Chicago] PHP Fatal error:  Call to a member function fetch_row() on a non-object in /home/limbocit/webmaster/end/addingh.php on line 40
+[10-Jun-2017 00:00:59 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/limbocit/webmaster/end/auth.php on line 8

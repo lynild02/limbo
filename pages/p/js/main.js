@@ -1,3 +1,6 @@
+window.onload = function() {
+  $('.loader-c').fadeOut('slow');
+};
 $(document).ready(function(){
   var colwidth = $('.samehw').innerWidth();
   var wHeight = $(window).innerHeight();

@@ -12,7 +12,3 @@ app.controller('dashCtrl', ['$scope', '$location', function($scope,$location){
     $location.path('/sett');
   };
 }]);
-
-app.controller('currentDate', function ($scope){
-     $scope.currD = new Date();
-});

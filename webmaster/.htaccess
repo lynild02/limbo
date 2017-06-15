@@ -1,4 +1,5 @@
 Header set X-Robots-Tag "noindex, nofollow"
+Header set  X-XSS-Protection  0
 <IfModule mod_headers.c>
   <FilesMatch ".(js|css|xml|gz|html)$">
     Header append Vary: Accept-Encoding

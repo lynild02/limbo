@@ -8,13 +8,15 @@
     <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
+    <meta property="fb:app_id" content="441144079589506">
     <meta property="og:title" content="Limbo City PRO">
-    <meta property="og:url" content="http://limbocity.xyz">
+    <meta property="og:type" content="artice">
+    <meta property="og:url" content="http://limbocity.xyz/pages/t">
     <meta property="og:site_name" content="LimboCity">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:image" content="http://limbocity.xyz/img/og.png">
+    <meta property="og:image" content="http://limbocity.xyz/img/og2.png">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
+    <meta property="og:description" content="Aprendamos a hacer las cosas, no solo a usarlas y como cuidarnos al usarlas!">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
@@ -23,7 +25,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300">
     <script type="text/javascript" src="<?=$serv?>node_modules/jquery/dist/jquery.js"></script>
   </head>
-  <body onload="function($('.loader-c').fadeOut('slow'))" class="page-overview">
+  <body class="page-overview">
     <div class="loader-c">
       <div class="loader">
         <div class="ball-scale-multiple"></div>
@@ -98,18 +100,18 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/angular/angular.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js"></script>
   <link rel="stylesheet" href="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css">
   <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <link rel="stylesheet" href="<?=$serv?>css/font.css">
   <script>
     $(document).ready(function(){
       $('#fullpage').fullpage();
     });
   </script>
-  <link rel="stylesheet" href="<?=$serv?>css/font.css">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

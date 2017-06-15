@@ -8,13 +8,15 @@
     <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Limbo City PRO">
-    <meta property="og:url" content="http://limbocity.xyz">
+    <meta property="fb:app_id" content="441144079589506">
+    <meta property="og:title" content="Limbo City - Notas, Concejos y tutoriales.">
+    <meta property="og:type" content="artice">
+    <meta property="og:url" content="http://limbocity.xyz/pages/t">
     <meta property="og:site_name" content="LimboCity">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:image" content="http://limbocity.xyz/img/og.png">
+    <meta property="og:image" content="http://limbocity.xyz/img/og2.png">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
+    <meta property="og:description" content="Concejos para que tus paseos por la web siempre sean seguros!">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
@@ -48,13 +50,13 @@
       <p>Ten presente que puedes enviar un mensaje siempre que quieras a <a href='mailto:info@limbocity.xyz'>este correo</a> o nuestras <a href='<?=$serv?>social'>redes sociales</a>, para hacer cualquier petición.</p>
     </div>
     <div id="pub"></div><?php
-     $query="SELECT * FROM tnotes ORDER BY date DESC";
+     $query="SELECT * FROM tnotes WHERE type = 'notes' ORDER BY date DESC";
      $do = $tconexion->query($query);
     ?>
     <div id="container" class="grid"><?php while($row=$do->fetch_assoc()){ ?>
       <div class="grid-sizer"></div>
       <div class="grid-item"><img src="<?php echo $row["img"];?>" title="title" alt="alt" attr class="lazy">
-        <figcaption><?php echo $row['title'];?></figcaption><a href="<?php echo $row["lnk"];?>" title="<?php echo $row['title'];?>"></a>
+        <figcaption><?php echo $row['title'];?></figcaption><a href="<?php echo $row['lnk'];?>" title="<?php echo $row['title'];?>"></a>
       </div><?php } ?>
     </div>
     <footer>
@@ -97,20 +99,11 @@
       </article>
     </footer>
   </body>
-  <script type="text/javascript" src="<?=$serv?>node_modules/angular/angular.js" async="async"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js" async="async"></script>
-  <link rel="stylesheet" href="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css">
-  <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js" async="async"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js" async="async"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/masonry-layout/dist/masonry.pkgd.min.js" async="async"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/imagesloaded/imagesloaded.pkgd.min.js" async="async"></script>
-  <script type="text/javascript" src="js/main.js" async="async"></script>
-  <script>
-    $(document).ready(function(){
-      $("img.lazy").lazyload();
-      $('#fullpage').fullpage();
-    });
-  </script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/angular/angular.js" async></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js" async></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/masonry-layout/dist/masonry.pkgd.min.js" async></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/imagesloaded/imagesloaded.pkgd.min.js" async></script>
+  <script type="text/javascript" src="js/main.js" async></script>
   <link rel="stylesheet" href="<?=$serv?>css/font.css">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

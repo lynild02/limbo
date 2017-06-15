@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Portafolio - Los trabajos de diseño y programacion Web que hemos realizado, ademas de algunos projectos personales y mas">
-    <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes,portafolio,trabajos,clientes,empresas,asociaciones">
+    <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes,portafolio,trabajos,clientes,empresas,asociaciones,portfolio,portafolio,mi,trabajo,proyecto,sitios,hechos,terminados,proceso">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Limbo City PRO - Portafolio">
@@ -13,17 +13,18 @@
     <meta property="og:site_name" content="LimboCity">
     <meta property="og:locale" content="es_ES">
     <meta property="og:image" content="http://limbocity.xyz/img/og.png">
-    <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
+    <meta property="og:description" content="Conoce mi trabajo y proyectos que tengo aun en proceso!">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
-    <link rel="stylesheet" href="css/master.min.css">
     <link rel="stylesheet" href="<?=$serv?>node_modules/loaders.css/loaders.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300">
-    <script type="text/javascript" src="<?=$serv?>node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="<?=$serv?>js/contact.js"></script>
+    <link rel="stylesheet" href="<?=$serv?>css/font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300" async>
+    <link rel="stylesheet" href="css/master.min.css">
+    <script type="text/javascript" src="<?=$serv?>node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js"></script>
   </head>
-  <body onload="funcion($('.loader-c').fadeOut('slow'))" class="page-overview">
+  <body class="page-overview">
     <div class="loader-c">
       <div class="loader">
         <div class="ball-scale-multiple"></div>
@@ -88,6 +89,14 @@
                 </div>
               </figcaption><a href="<?php echo $row['url'];?>" target="_blank"></a>
             </figure><?php } ?>
+          </div>
+        </div>
+        <div id="particles-js" class="buyy">
+          <div class="tpart">
+            <h3>Información y Cotizaciones</h3>
+            <p>Podemos cotizar para ti cualquier projecto sin costo ni compromiso.</p>
+            <p>Ademas si no tienes bien definido que tipo de sitio sería mejor para tu negocio te ayudamos en el proceso de seleccionar y diseñar la imagen por completo.</p>
+            <p><strong>Solo llama!</strong><br>&nbsp;o escribenos, lo que vaya mas contigo...</p><strong><a href='tel:+522431162653'>Llamanos</a>&nbsp;ó&nbsp;<a href='mailto:info@limbocity.xyz'>Escribenos</a></strong>
           </div>
         </div>
         <div id="contact" class="wrapp">
@@ -158,20 +167,21 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="<?=$serv?>js/functions.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/angular/angular.js"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js"></script>
+  <!--script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js')-->
   <link rel="stylesheet" href="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.min.css">
   <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js"></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/particles.js/particles.js"></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/scrollflow/scrollflow.js"></script>
+  <script type="text/javascript" src="<?=$serv?>js/contact.js"></script>
   <link rel="stylesheet" href="<?=$serv?>css/form.min.css">
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   <script>
     $(document).ready(function(){
       $('#fullpage').fullpage();
     });
   </script>
-  <link rel="stylesheet" href="<?=$serv?>css/font.css">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

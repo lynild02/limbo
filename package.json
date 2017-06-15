@@ -1,15 +1,16 @@
 {
   "name": "limbocity",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Log for LimboCity Website",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.6.4",
     "alertifyjs": "^1.10.0",
+    "angular": "^1.6.4",
     "angular-animate": "^1.6.4",
-    "angular-material": "^1.1.4",
     "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4",
     "angular-route": "^1.6.4",
+    "animate.css": "^3.5.2",
     "fullpage.js": "^2.9.4",
     "imagesloaded": "^4.1.2",
     "jquery": "^3.2.1",
@@ -32,7 +33,7 @@
     "city"
   ],
   "author": "Angel de Jesus Gomez Juarez",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lynild02/limbo/issues"
   },

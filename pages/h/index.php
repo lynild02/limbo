@@ -34,9 +34,9 @@
       <nav>
         <ul>
           <li>Inicio<a href="../../"></a></li>
+          <li>Portafolio<a href="../p"></a></li>
           <li>Tutoriales<a href="../t"></a></li>
           <li>Dibujo y mas<a href="../a"></a></li>
-          <li>Acerda de...<a href="../h"></a></li>
         </ul>
       </nav>
     </header>

@@ -2,12 +2,10 @@
   $server = 'localhost';
   $user = 'root';
   $pass = '';
-  $db = 'Development';
-  $tdb = 'tutoriales';
-  $wbm = 'webmaster';
+  $db = 'tutoriales';
+  $db2 = 'x3';
   $conexion = new mysqli($server, $user, $pass, $db);
-  $tconexion = new mysqli($server, $user, $pass, $tdb);
-  $wconexion = new mysqli($server, $user, $pass, $wbm);
+  $conexion2 = new mysqli($server, $user, $pass, $db2);
   $conexion->set_charset('utf8');
   if ($conexion->connect_errno) {
   	echo "An error has ocurred while try to connect with the DB {$conexion->connect_errno}";

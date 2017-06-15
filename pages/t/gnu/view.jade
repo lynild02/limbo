@@ -2,16 +2,8 @@
 |<?php
 |include '../../../m-config.php';
 |$id  = evaluar($_GET['id']);
-|$cdb  = $tconexion->query("SELECT * FROM tgnu WHERE id=$id");
+|$cdb  = $tconexion->query("SELECT * FROM tnotes WHERE id=$id");
 |$row = $cdb->fetch_assoc();
-|$tl=$row['title'];
-|$au=$row['author'];
-|$dt=$row['date'];
-|$fdesc=$row['fdesc'];
-|$adesc=$row['descripton'];
-|$iau=$row['iau'];
-|$nau=$row['nau'];
-|$mau=$row['mau'];
 |?>
 doctype html
 html(lang='es')
@@ -22,14 +14,17 @@ html(lang='es')
         meta(name='description', content='Tutoriales, concejos y notas acerca de programacion en varios lenguajes, seguridad informatica, correcto uso de nuestros dispositivos y cuidado en redes sociales e internet en general.')
         meta(name='keywords', content='limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes')
         meta(name='author', content='Angel de jesus gomez juarez, lynild02')
+        meta(property='fb:app_id' content='441144079589506')
         meta(name="robots", content="index, follow")
-        meta(property="og:title" content="Limbo City PRO")
-        meta(property="og:url" content="http://limbocity.xyz")
-        meta(property="og:site_name" content="LimboCity")
+        meta(property="og:title" content!="<?php echo 'LC - ' . $tit; ?>")
+        meta(property="og:url" content!="<?php echo 'http://limbocity.xyz/pages/t/notes/view.php?id=' . $id; ?>")
+        meta(property="og:site_name" content="LimboCity - Notas, Concejos y tutoriales.")
         meta(property="og:locale" content="es_ES")
-        meta(property="og:image" content="http://limbocity.xyz/img/og.png")
-        meta(property="og:image:type" content="image/png")
+        meta(property="og:image" content!="<?php echo $row['img'];?>")
         meta(property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!")
+        //- --- TW Open Graph --- -//
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:creator" content="@lil_bayonetta")
         //- ----- link website ----- //
         link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
 
@@ -38,9 +33,9 @@ html(lang='es')
         link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/skeleton.css')
         link(rel='stylesheet', href='../css/view.min.css')
         link(rel='stylesheet', href!='<?=$serv?>node_modules/loaders.css/loaders.min.css')
-        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300')
-        
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300' async)        
         script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.js')
+        script(type='text/javascript', src!='<?=$serv?>js/fb.js')
         
     body.page-overview
       .loader-c
@@ -63,45 +58,58 @@ html(lang='es')
                 a(href!='<?=$serv?>/pages/h')
           .section-soc
         .title-space
-          h3 <?=$tl?>
+          //- --- TITULO --- -//
+          h3 <? echo $row['title'];?>
           p.
-            Por&nbsp;<span class='auth'><?=$au?></span>&nbsp;&mdash;&nbsp;<?=$dt?>
+            Por&nbsp;<span class='auth'><? echo $row['nau'];?></span>&nbsp;&mdash;&nbsp;<? echo $row['date'];?>
         .all-body
           .main-content
             .body
               .img-container
-                img.lazy(data-original!="data:image/png;base64,<?php echo base64_encode($row['img']);?>")
+                //- --- IMAGE PRINCIPAL --- -//
+                img.lazy(data-original!="<?php echo $row['img'];?>")
               .fast-description
+                //- --- DESCRIPCION --- -//
                 p.
-                  <?=$fdesc?>
-              h3 <?=$tl?>
+                  <? echo $row['description'];?>
+              //- --- TITULO --- -//
+              h3 <? echo $row['title'];?>
+              //- --- BODY --- -//
               div
-                <?=$adesc?>
-            .author-f    
+                <? echo $row['body'];?>
+            //- --- CUADRO DE AUTOR --- -//
+            .author-f
               .img-c
-                img.lazy(data-original!='<?=$iau?>')
+                img.lazy(data-original!='<? echo $row["imgusr"];?>')
               .inf-c
                 span.nau
-                  a(href!='<?=$nau?>') <?=$nau?><br>
+                  a(href!='<? echo $row["lau"];?>') <? echo $row['nau'];?><br>
                 p.
-                  <?=$infau?>
+                  <? echo $row['iau'];?>
                 p.tt
-                  a(href!='<?=$mau?>') <?=$nau?>&nbsp;&mdash;&nbsp;
+                  a(href!='<? echo $row["mau"];?>') <? echo $row['mau'];?>&nbsp;&mdash;&nbsp;
+            #bdonativo
+              p Por que sabemos que tu corazon es GRANDE :D
+              form(action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top")
+                input(type="hidden" name="cmd" value="_s-xclick")
+                input(type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----")
+                input(type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.")
+                img(alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1")
+            //- --- ULTIMOS ARTICULOS --- -//
             .last-art
               .row
                 //- ---- Aqui proceso de presentacion 3 principales ---- //
                 |<?php
-                |  $query="SELECT * FROM tgnu ORDER BY date DESC LIMIT 0, 3";
+                |  $query="SELECT * FROM tnotes ORDER BY date DESC LIMIT 0, 3";
                 |  $do = $tconexion->query($query);
-                |?>
                 //- ---- Bucle ---- //
-                |<?php while($row=$do->fetch_assoc()){ ?>
+                |while($row=$do->fetch_assoc()){ ?>
                 div.columns.four.samehw
                   figure.rr
                     .img-cc
-                      img.lazy(data-original!="data:image/png;base64,<?php echo base64_encode($row['img']);?>")
-                    figcaption <?php echo $row['title'];?>
-                    a(href!="<?php echo $row['lnk'];?>", title!="<?php echo $row['title'];?>")
+                      img(src!="<? echo $row['img'];?>")
+                    figcaption <? echo $row['title'];?>
+                    a(href!="<? echo $row['lnk'];?>", title!="<? echo $row['title'];?>")
                 |<?php } ?>
             #disqus_thread
               script.
@@ -122,10 +130,21 @@ html(lang='es')
                 })();
               noscript.
                 Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-              
+          //- --- SECOND *NOTAS A HUEVO*--- -//
           .second-content
             .publc
+              div.fb-page(data-href="https://www.facebook.com/limbocity/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true")
+                blockquote(cite="https://www.facebook.com/limbocity/" class="fb-xfbml-parse-ignore")
+                  a(href="https://www.facebook.com/limbocity/") Limbo City
+            #bdonativo
+              p Por que sabemos que tu corazon es GRANDE :D
+              form(action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top")
+                input(type="hidden" name="cmd" value="_s-xclick")
+                input(type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----")
+                input(type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.")
+                img(alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1")
             .notes
+              p.llt <span>+</span> NOTAS
               .row
                 //- ---- Aqui proceso de presentacion 3 principales ---- //
                 |<?php
@@ -134,11 +153,11 @@ html(lang='es')
                 |?>
                 //- ---- Bucle ---- //
                 |<?php while($row=$doo->fetch_assoc()){ ?>
-                figure.rr
+                figure.rr.secondrr
                   .img-scc
-                    img(src!="data:image/png;base64,<?php echo base64_encode($row['img']);?>")
-                  figcaption <?php echo $row['title'];?>
-                  a(href!="../notes/<?php echo $row['lnk'];?>", title!="<?php echo $row['title'];?>")
+                    img(src!="<?php echo $row['img'];?>")
+                  figcaption <? echo $row['title'];?>
+                  a(href!="../notes/<? echo $row['lnk'];?>", title!="<? echo $row['title'];?>")
                 |<?php } ?>
       footer
         article.container
@@ -182,6 +201,7 @@ html(lang='es')
     script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-lazyload/jquery.lazyload.js')
     script(type='text/javascript', src='../js/view.js' async='async')
     script(id="dsq-count-scr" src="//limbo-city.disqus.com/count.js" async)
+    script(src='http://ogoser.com/tools/js/custom-file-input.js' async)
     script.
       $(document).ready(function(){
         $("img.lazy").lazyload();

@@ -12,7 +12,7 @@ app.config(function($routeProvider){
     templateUrl: 'tmp/add.php'
   })
   .when('/addf', {
-    templateUrl: 'tmp/addf.php'
+    templateUrl: 'tmp/addh.php'
   })
   .when('/usr', {
     templateUrl: 'tmp/usr.php'
@@ -44,30 +44,6 @@ app.controller('loginCtrl', ['$scope', '$http', '$location', function($scope,$ht
   };
 }]);
 
-app.controller('addCtrl', ['$scope', '$http', '$location', function($scope,$http,$location){
-  $scope.addSubmit = function(){
-    $http.post('end/adding.php', {table: $scope.table, title: $scope.title, description: $scope.description, image: $scope.img, date: $scope.date, nau: $scope.nau, iau: $scope.iau}).then(function(){
-    }, function errorCallback(response){
-      console.log(error);
-    });
-  };
-}]);
-
-//- --- FILE UPLOAD --- -//
-app.controller('MyCtrl', ['$scope', 'Upload', function ($scope, Upload) {
-  // upload on file select or drop
-  $scope.upload = function (file) {
-      Upload.upload({
-          url: 'end/upload',
-          data: {file: file, 'username': $scope.username}
-      }).then(function (resp) {
-        $location.path('/addone');
-          console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
-      }, function (resp) {
-          console.log('Error status: ' + resp.status);
-      }, function (evt) {
-          var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-          console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
-      });
-  };
-  }]);
+app.controller('currentDate', function ($scope){
+     $scope.currD = new Date();
+});

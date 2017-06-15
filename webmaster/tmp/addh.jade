@@ -1,0 +1,35 @@
+//output:addh.php
+script.
+  $('.wrapp').css({'background':'url(img/bgh.jpg)','background-size':'cover','background-position':'center center','background-repeat':'no-repeat'});
+div.add-div
+  article.container
+    h2 Let's add a Hentai. Ready?
+    form(action='end/addingh.php' method="post" enctype="multipart/form-data")
+      .row
+        select.columns.six(name='type' ng-model='tablen')
+          option(value='' selected) -- Select One --
+          option(value='hentai') Hentai
+          option(value='doujinshi') Doujinshi
+          option(value='other') Contribution
+        span.columns.six.tip Your content will be posted on <b>{{tablen}}.</b>
+      .row
+        input.columns.six(type='text' name='title' placeholder='Titulo')
+        input.columns.six(type='text' name='description' placeholder='description')
+      .row
+      input.u-full-width(type='text' name='img' placeholder='link para imagen principal')
+      .row
+        input.columns.four(type='text' name='chap1' placeholder='Link Chap1')
+        input.columns.four(type='text' name='chap2' placeholder='Link Chap2')
+        input.columns.four(type='text' name='chap3' placeholder='Link Chap3')
+      .row
+        input.columns.four(type='text' name='chap4' placeholder='Link Chap4')
+        input.columns.four(type='text' name='chap5' placeholder='Link Chap5')
+        input.columns.four(type='text' name='chap6' placeholder='Link Chap6')
+      .row
+        input.columns.four(type='text' name='chap7' placeholder='Link Chap7')
+        input.columns.four(type='text' name='chap8' placeholder='Link Chap8')
+        input.columns.four(type='text' name='chap9' placeholder='Link Chap9')
+      .row
+        input.columns.four(type='text' name='chap10' placeholder='Link Chap10')
+      .row
+        input.columns.four.button-primary(type='submit' name='send')

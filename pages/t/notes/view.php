@@ -4,6 +4,7 @@ include '../../../m-config.php';
 $id  = evaluar($_GET['id']);
 $cdb  = $tconexion->query("SELECT * FROM tnotes WHERE id=$id");
 $row = $cdb->fetch_assoc();
+$tit = $row['title'];
 ?><!DOCTYPE html>
 <html lang="es">
   <head>
@@ -14,20 +15,31 @@ $row = $cdb->fetch_assoc();
     <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Limbo City PRO">
-    <meta property="og:url" content="http://limbocity.xyz">
-    <meta property="og:site_name" content="LimboCity">
+    <meta property="fb:app_id" content="441144079589506">
+    <meta property="og:title" content="<?php echo 'LC - ' . $tit; ?>">
+    <meta property="og:url" content="<?php echo 'http://limbocity.xyz/pages/t/notes/view.php?id=' . $id; ?>">
+    <meta property="og:site_name" content="LimboCity - Notas, Concejos y tutoriales.">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:image" content="http://limbocity.xyz/img/og.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
+    <meta property="og:image" content="<?php echo $row['img'];?>">
+    <meta property="og:description" content="<?php echo $row['description'];?>">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@lil_bayonetta">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
     <link rel="stylesheet" href="../css/view.min.css">
     <link rel="stylesheet" href="<?=$serv?>node_modules/loaders.css/loaders.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300" async>
     <script type="text/javascript" src="<?=$serv?>node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="<?=$serv?>js/fb.js"></script>
+    <script type="text/javascript" async>
+      var _prvar=_prvar||new Object();
+      (function(pa,s){if(document.getElementById('pr444a070e'))return false;
+      
+      pa=document.createElement('script');pa.type='text/javascript';pa.async=true;pa.id='pr444a070e';pa.src='//prscripts.com/pub.js';
+          s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(pa,s);})();
+      
+    </script>
   </head>
   <body class="page-overview">
     <div class="loader-c">
@@ -64,6 +76,10 @@ $row = $cdb->fetch_assoc();
             <h3><? echo $row['title'];?></h3>
             <div><? echo $row['body'];?></div>
           </div>
+          <div class="tw">
+            <link rel="me" href="http://limbocity.xyz">
+            <p>Comparte en Twitter esta nota!</p><a href="https://twitter.com/intent/tweet?text=Hola%20desde%20Limbo%20City" data-size="large" class="twitter-share-button">Tweet</a>
+          </div>
           <div class="author-f">
             <div class="img-c"><img data-original="<? echo $row["imgusr"];?>" class="lazy"></div>
             <div class="inf-c"><span class="nau"><a href="<? echo $row["lau"];?>"><? echo $row['nau'];?><br></a></span>
@@ -71,15 +87,22 @@ $row = $cdb->fetch_assoc();
               <p class="tt"><a href="<? echo $row["mau"];?>"><? echo $row['mau'];?>&nbsp;&mdash;&nbsp;</a></p>
             </div>
           </div>
+          <div id="bdonativo">
+            <p>Por que sabemos que tu corazon es GRANDE :D</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+              <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea."><img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
           <div class="last-art">
             <div class="row"><?php
                $query="SELECT * FROM tnotes ORDER BY date DESC LIMIT 0, 3";
-               $do = $tconexion->query($query);
-              ?><?php while($row=$do->fetch_assoc()){ ?>
+               $do = $tconexion->query($query);while($row=$do->fetch_assoc()){ ?>
               <div class="columns four samehw">
                 <figure class="rr">
                   <div class="img-cc"><img src="<? echo $row['img'];?>"></div>
-                  <figcaption><? echo $row['title'];?></figcaption><a href="<? echo $row['lnk'];?>" title="<? echo $row['title'];?>"></a>
+                  <figcaption><? echo $row['title'];?></figcaption><a href="../notes/<? echo $row['lnk'];?>" title="<? echo $row['title'];?>"></a>
                 </figure>
               </div><?php } ?>
             </div>
@@ -106,10 +129,22 @@ $row = $cdb->fetch_assoc();
           </div>
         </div>
         <div class="second-content">
-          <div class="publc"></div>
+          <div class="publc">
+            <div data-href="https://www.facebook.com/limbocity/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" class="fb-page">
+              <blockquote cite="https://www.facebook.com/limbocity/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/limbocity/">Limbo City</a></blockquote>
+            </div>
+          </div>
+          <div id="bdonativo">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+              <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea."><img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
           <div class="notes">
+            <p class="llt"><span>+</span> NOTAS</p>
             <div class="row"><?php
-               $quer="SELECT * FROM tnotes ORDER BY date DESC LIMIT 0, 3";
+               $quer="SELECT * FROM tnotes ORDER BY date DESC LIMIT 0, 5";
                $doo = $tconexion->query($quer);
               ?><?php while($row=$doo->fetch_assoc()){ ?>
               <figure class="rr secondrr">
@@ -168,6 +203,7 @@ $row = $cdb->fetch_assoc();
   <script type="text/javascript" src="../js/view.js" async="async"></script>
   <script id="dsq-count-scr" src="//limbo-city.disqus.com/count.js" async></script>
   <script src="http://ogoser.com/tools/js/custom-file-input.js" async></script>
+  <script type="text/javascript" src="../js/tw.js" async></script>
   <script>
     $(document).ready(function(){
       $("img.lazy").lazyload();

@@ -5,12 +5,12 @@
     <div class="row">
       <figure type="button" ng-model="add" ng-click="myaddSubmit()" class="columns three rr"><img src="img/004-file.svg"/>
         <figcaption>
-          <h4>Añadir archivo</h4>
+          <h4>Añadir Entrada</h4>
         </figcaption>
       </figure>
       <figure type="button" ng-model="addf" ng-click="myaddfSubmit()" class="columns three rr"><img src="img/001-inbox.svg"/>
         <figcaption>
-          <h4>Am. Archivos</h4>
+          <h4>Añadir Hentai</h4>
         </figcaption>
       </figure>
       <figure type="button" ng-model="usr" ng-click="usrSubmit()" class="columns three rr"><img src="img/003-users.svg"/>

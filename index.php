@@ -4,10 +4,11 @@
     <title>Limbo City PRO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
+    <meta name="description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo e información acerca de buenas practicas en la red.">
     <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar.matamoros,puebla,mexico">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
+    <meta property="fb:app_id" content="441144079589506">
     <meta property="og:title" content="Limbo City PRO">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://limbocity.xyz">
@@ -17,7 +18,7 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="800">
-    <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo!">
+    <meta property="og:description" content="Freelance Web Designer - Diseño y programacion Web, Tutoriales gratuitos para que aprendas a hacerlo tu mismo e información acerca de buenas practicas en la red.">
     <link rel="icon" href="src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="Skeleton/css/normalize.css">
     <link rel="stylesheet" href="Skeleton/css/skeleton.css">
@@ -25,9 +26,9 @@
     <link rel="stylesheet" href="css/master.min.css">
     <link rel="stylesheet" href="<?=$serv?>node_modules/loaders.css/loaders.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Slab|Old+Standard+TT|Open+Sans+Condensed:300">
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js" async="async"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
   </head>
-  <body onload="function($('.loader-c').fadeOut('slow'))" class="page-overview">
+  <body class="page-overview">
     <div class="loader-c">
       <div class="loader">
         <div class="ball-scale-multiple"></div>
@@ -58,6 +59,8 @@
           </div>
         </div>
         <h3 class="hunt">Me gusta lo dificil, me atrae lo complicado y me enamoro de lo imposible.</h3>
+        <hr>
+        <div data-share="true" data-width="450" data-show-faces="true" style="text-align: center;" class="fb-like u-full-width"></div>
         <hr>
         <div class="content-wrapper">
           <p class="indief">Diseñador Web Independiente&nbsp;&mdash;&nbsp;desde M&eacute;xico</p>
@@ -132,8 +135,8 @@
       </article>
     </footer>
   </body>
-  <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js" async></script>
-  <script type="text/javascript" src="js/functions.js" async></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/loaders.css/loaders.css.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -142,5 +145,24 @@
     
     ga('create', 'UA-70395856-1', 'auto');
     ga('send', 'pageview');
+    
+  </script>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '441144079589506',
+        xfbml      : true,
+        version    : 'v2.9'
+      });
+      FB.AppEvents.logPageView();
+    };
+    
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
   </script>
 </html>
