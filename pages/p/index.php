@@ -1,10 +1,10 @@
-<?php include '../../m-config.php';?><!DOCTYPE html>
+<?php include '../../m-config.php';header("Content-Type: text/html;charset=utf-8");?><!DOCTYPE html>
 <html lang="es">
   <head>
     <title>Portafolio - Limbo City</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="Portafolio - Los trabajos de diseño y programacion Web que hemos realizado, ademas de algunos projectos personales y mas">
+    <meta name="description" content="Portafolio - Los trabajos de diseño y programacion Web que hemos realizado, ademas de algunos proyectos personales y mas">
     <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes,portafolio,trabajos,clientes,empresas,asociaciones,portfolio,portafolio,mi,trabajo,proyecto,sitios,hechos,terminados,proceso">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
@@ -66,13 +66,13 @@
               <div class="columns four samehw">
                 <figure class="rr <?php echo $row["attr"];?>"><img src="data:image/png;base64,<?php echo base64_encode($row['image']);?>" title="<?php echo $row['title'];?>" attr>
                   <figcaption><?php echo $row['title'];?><br><hr><span><?php echo $row['description'];?></span></figcaption><a href="<?php echo $row['url'];?>" target="_blank"></a>
-                </figure><script>$('.<?php echo $row["attr"];?>').mouseover(function(){$('.back-big-g').css({'transition':'all .5s ease-in-out','opacity':1,'background':'url(data:image/png;base64,<?php echo base64_encode($row["image"]);?>)','background-size':'contain','background-repeat':'no-repeat','background-position':'center center'})});$('.<?php echo $row["attr"];?>').mouseleave(function(){$('.back-big-g').css({'opacity':0,'transition':'all .3s ease-in-out'})});</script>
+                </figure><script>$('.<?php echo $row["attr"];?>').mouseover(function(){$('.back-big-g').css({'transition':'all .5s ease-in-out','opacity':1,'background':'url(data:image/png;base64,<?php echo base64_encode($row["image2"]);?>)','background-size':'cover','background-repeat':'no-repeat','background-position':'center center'})});$('.<?php echo $row["attr"];?>').mouseleave(function(){$('.back-big-g').css({'opacity':0,'transition':'all .3s ease-in-out'})});</script>
               </div><?php } ?>
             </div>
           </div>
           <h2 class="hunt">Todos mis proyectos</h2>
           <p class="indief i">All my projects</p>
-          <p class="indief">Todos los projectos de mi portafolio, para clientes fisicos/reales y proyectos personales en proceso o proyectos experimentales.<br><span class='indief i'>Beware, Genius at Work :v</span></p>
+          <p class="indief">Todos los proyectos de mi portafolio, para clientes fisicos/reales y proyectos personales en proceso o proyectos experimentales.<br><span class='indief i'>Beware, Genius at Work :v</span></p>
         </div>
         <div class="c-fig wrapp">
           <div class="cfigt">
@@ -85,7 +85,7 @@
                 <div id="c-text">
                   <p class="tt"><?php echo $row['title'];?></p>
                   <hr>
-                  <p class="pp2">view</p>
+                  <p class="pp2">ver</p>
                 </div>
               </figcaption><a href="<?php echo $row['url'];?>" target="_blank"></a>
             </figure><?php } ?>
@@ -94,7 +94,7 @@
         <div id="particles-js" class="buyy">
           <div class="tpart">
             <h3>Información y Cotizaciones</h3>
-            <p>Podemos cotizar para ti cualquier projecto sin costo ni compromiso.</p>
+            <p>Podemos cotizar para ti cualquier proyecto sin costo ni compromiso.</p>
             <p>Ademas si no tienes bien definido que tipo de sitio sería mejor para tu negocio te ayudamos en el proceso de seleccionar y diseñar la imagen por completo.</p>
             <p><strong>Solo llama!</strong><br>&nbsp;o escribenos, lo que vaya mas contigo...</p><strong><a href='tel:+522431162653'>Llamanos</a>&nbsp;ó&nbsp;<a href='mailto:info@limbocity.xyz'>Escribenos</a></strong>
           </div>
@@ -172,9 +172,10 @@
   <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/particles.js/particles.js"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/scrollflow/scrollflow.js"></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/scrollflow/scrollflow.js" async></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/animate.css/animate.min.css" async></script>
   <script type="text/javascript" src="<?=$serv?>js/contact.js"></script>
-  <link rel="stylesheet" href="<?=$serv?>css/form.min.css">
+  <link rel="stylesheet" href="<?=$serv?>css/form.min.css" async>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script>

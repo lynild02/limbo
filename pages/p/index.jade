@@ -1,12 +1,12 @@
 //output:index.php
-|<?php include '../../m-config.php';?>
+|<?php include '../../m-config.php';header("Content-Type: text/html;charset=utf-8");?>
 doctype html
 html(lang='es')
     head
         title Portafolio - Limbo City
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-        meta(name='description', content='Portafolio - Los trabajos de diseño y programacion Web que hemos realizado, ademas de algunos projectos personales y mas')
+        meta(name='description', content='Portafolio - Los trabajos de diseño y programacion Web que hemos realizado, ademas de algunos proyectos personales y mas')
         meta(name='keywords', content='limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes,portafolio,trabajos,clientes,empresas,asociaciones,portfolio,portafolio,mi,trabajo,proyecto,sitios,hechos,terminados,proceso')
         meta(name='author', content='Angel de jesus gomez juarez, lynild02')
         meta(name="robots", content="index, follow")
@@ -78,11 +78,11 @@ html(lang='es')
                     img(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
                     figcaption <?php echo $row['title'];?><br><hr><span><?php echo $row['description'];?></span>
                     a(href!="<?php echo $row['url'];?>", target='_blank')
-                  |<script>$('.<?php echo $row["attr"];?>').mouseover(function(){$('.back-big-g').css({'transition':'all .5s ease-in-out','opacity':1,'background':'url(data:image/png;base64,<?php echo base64_encode($row["image"]);?>)','background-size':'contain','background-repeat':'no-repeat','background-position':'center center'})});$('.<?php echo $row["attr"];?>').mouseleave(function(){$('.back-big-g').css({'opacity':0,'transition':'all .3s ease-in-out'})});</script>
+                  |<script>$('.<?php echo $row["attr"];?>').mouseover(function(){$('.back-big-g').css({'transition':'all .5s ease-in-out','opacity':1,'background':'url(data:image/png;base64,<?php echo base64_encode($row["image2"]);?>)','background-size':'cover','background-repeat':'no-repeat','background-position':'center center'})});$('.<?php echo $row["attr"];?>').mouseleave(function(){$('.back-big-g').css({'opacity':0,'transition':'all .3s ease-in-out'})});</script>
                 |<?php } ?>
             h2.hunt Todos mis proyectos
             p.indief.i All my projects
-            p.indief Todos los projectos de mi portafolio, para clientes fisicos/reales y proyectos personales en proceso o proyectos experimentales.<br><span class='indief i'>Beware, Genius at Work :v</span>
+            p.indief Todos los proyectos de mi portafolio, para clientes fisicos/reales y proyectos personales en proceso o proyectos experimentales.<br><span class='indief i'>Beware, Genius at Work :v</span>
           .c-fig.wrapp
             .cfigt
               |<?php
@@ -97,14 +97,14 @@ html(lang='es')
                   #c-text
                     p.tt <?php echo $row['title'];?>
                     hr
-                    p.pp2 view
+                    p.pp2 ver
                 a(href!="<?php echo $row['url'];?>", target='_blank')
               |<?php } ?>
           //- ----- Buy ---- -//
           .buyy#particles-js
             .tpart
               h3 Información y Cotizaciones
-              p Podemos cotizar para ti cualquier projecto sin costo ni compromiso.
+              p Podemos cotizar para ti cualquier proyecto sin costo ni compromiso.
               p Ademas si no tienes bien definido que tipo de sitio sería mejor para tu negocio te ayudamos en el proceso de seleccionar y diseñar la imagen por completo.
               p <strong>Solo llama!</strong><br>&nbsp;o escribenos, lo que vaya mas contigo...
               strong
@@ -171,9 +171,10 @@ html(lang='es')
     script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/vendors/scrolloverflow.js')
     script(type='text/javascript', src!='<?=$serv?>node_modules/fullpage.js/dist/jquery.fullpage.js')
     script(type='text/javascript', src!='<?=$serv?>node_modules/particles.js/particles.js')
-    script(type='text/javascript', src!='<?=$serv?>node_modules/scrollflow/scrollflow.js')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/scrollflow/scrollflow.js' async)
+    script(type='text/javascript', src!='<?=$serv?>node_modules/animate.css/animate.min.css' async)
     script(type='text/javascript', src!='<?=$serv?>js/contact.js')
-    link(rel='stylesheet', href!='<?=$serv?>css/form.min.css')
+    link(rel='stylesheet', href!='<?=$serv?>css/form.min.css' async)
     script(type='text/javascript', src='js/app.js')
     script(type='text/javascript', src='js/main.js')
     script.

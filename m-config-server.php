@@ -10,6 +10,7 @@
   	echo "An error has ocurred while try to connect with the DB {$conexion->connect_errno}";
   }
   $conexion = new mysqli($server, $user, $pass, $pdb);
+  $conexion->set_charset('utf8');
   $serv='http://limbocity.xyz/';
 
   function evaluar($valor)
