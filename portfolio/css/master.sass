@@ -1,0 +1,364 @@
+//fonts
+$opensans: 'Open Sans Condensed', sans-serif
+$indief: 'Indie Flower', cursive
+$amatic: 'Amatic SC', cursive
+$josefine: 'Josefin Slab', serif
+$oldstandart: 'Old Standard TT', serif
+$ringlead: 'Ringlead'
+$raspberry: 'Raspberry'
+$other: 'Other'
+$gloss: 'glossnbloom'
+$lounge: #d3394c
+$glounge: #b61924
+*
+  box-sizing: border-box
+figure
+  margin: auto
+img
+  max-width: 100%
+a
+  text-decoration: none
+  &:hover
+    color: purple
+figure.rr
+  position: relative
+  overflow: hidden
+  img
+    width: auto
+    height: auto
+    min-width: 100%
+    display: block
+//General
+.indief
+  font-family: $josefine
+  margin-bottom: 0
+  font-size: 1.6em
+  &.i
+    font-size: .8em
+    font-style: italic
+    margin-bottom: 20px
+.hunt
+  font-family: 'huntress'
+  text-transform: uppercase
+  text-align: center
+.black
+  color: #000 !important
+//Origin
+.page-overview
+  .loader-c
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    z-index: 11
+    transition: all .5s ease-in-out
+    .loader
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 12
+  .back-big-g
+    position: fixed
+    top: 100px
+    left: 150px
+    right: 150px
+    bottom: 100px
+    z-index: -5
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    transition: all .2s ease-in-out
+  header
+    position: fixed
+    width: 100%
+    min-height: 50px
+    background: rgba(255,255,255,.7)
+    -webkit-backdrop-filter: blur(20px)
+    box-shadow: rgba(0,0,0,.3) 1px 3px 3px
+    z-index: 10
+    nav
+      position: absolute
+      top: 0
+      right: 0
+      width: 40%
+      height: 100%
+      margin: 0
+      padding: 0
+      ul
+        width: 100%
+        height: 100%
+        display: table
+        table-layout: fixed
+        margin: 0
+        li
+          position: relative
+          display: table-cell
+          width: 100%
+          margin: 0
+          height: 100%
+          text-align: center
+          vertical-align: middle
+          font-weight: bold
+          transform: translate(0)
+          transition: all .3s ease-in-out
+          &:hover
+            transform: translateY(-4px)
+            transition: all .3s ease-in-out
+        a
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+  .fullp
+    .asect
+      position: relative
+      &#f-backg
+        background: url(../../../img/bg/ao.gif)
+      background: #fff
+      &.ahbd
+        background: url(../img/naturalw.png)
+      .title
+        position: absolute
+        width: 50%
+        height: auto
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        color: #fff
+        font-family: $josefine
+        span
+          font-size: 5em
+          text-align: center
+          &.ring
+            font-family: $gloss
+    .whole-content
+      #last
+        margin-top: 60px
+        padding: 10px 50px
+        width: 100%
+        height: auto
+        text-align: center
+        div
+          h2,p
+            text-shadow: rgba(255,255,255,.3) 1px 1px 1px
+          .row
+            div.columns.four
+              padding: 50px
+              figure.rr
+                width: 100%
+                height: 100%
+                margin: 0
+                padding: 0
+                position: relative
+                border: solid 1px #000
+                background: #fff
+                img
+                  width: auto
+                  height: auto
+                  min-width: 100%
+                  min-height: 100%
+                  display: block
+                  margin: 0
+                figcaption
+                  width: 100%
+                  height: 20%
+                  position: absolute
+                  bottom: 0
+                  color: #000
+                  font-weight: bold
+                  padding: 10px
+                  background: rgba(255,255,255,.8)
+                  -webkit-backdrop-filter: blur(20px)
+                  transition: all .3s ease-in-out
+                  span
+                    opacity: 0
+                    font-size: 100%
+                    transition: all .3s ease-in-out
+                a
+                  position: absolute
+                  top: 0
+                  left: 0
+                  right: 0
+                  bottom: 0
+                &:hover
+                  figcaption
+                    height: 100%
+                    padding-top: 5%
+                    transition: all .3s ease-in-out
+                    span
+                      opacity: 1
+                      color: red
+                      transition: all .8s ease-in-out
+                  img
+                    filter: grayscale(20%)
+                    transition: all .3s ease-in-out
+      //Aqui segunda seccion
+      .c-fig
+        width: 100%
+        height: auto
+        position: relative
+        padding: 5px 0
+        background: url(../img/bravhac.jpg)
+          repeat: no-repeat
+          size: cover
+          position: center center
+        overflow: hidden
+        .cfigt
+          position: absolute
+          width: 95%
+          height: auto
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          .close
+            width: 25%
+            float: left
+            height: auto
+            max-height: 300px
+            min-height: 300px
+            position: relative
+            margin: 0
+            display: inline-block
+            overflow: hidden
+            padding: 10px
+            img
+              opacity: 0
+              //min-width: 100%
+              //min-height: 100%
+              width: 100%
+              height: 100%
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              transition: all .3s ease-in-out
+              transition: opacity .5s ease-in-out
+            figcaption
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              transition: all .3s ease-in-out
+              #c-text
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                text-align: center
+                color: #fff
+                text-shadow: rgba(0,0,0,.2) 1px 3px 2px
+                font-family: 'AlpineCleanL', sans-serif
+                .tt
+                  font-weight: bold
+                  font-size: 1.5em
+                .tt,.pp2
+                  transform: translate(0)
+                  opacity: 1
+                  transition: all .3s ease-in-out
+                .pp2
+                  font-size: 1.3em
+                  color: $lounge
+                hr
+                  transform: translateX(0)
+                  opacity: 1
+                  transition: all .3s ease-in-out
+            a
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+            &:hover
+              transition: all .3s ease-in-out
+              background: transparent
+              img
+                opacity: 1
+                transition: all .3s ease-in-out
+              figcaption
+                #c-text
+                  .tt
+                    opacity: 0
+                    transform: translateY(-100%)
+                    transition: all .3s ease-in-out
+                  .pp2
+                    opacity: 0
+                    transform: translateY(100%)
+                    transition: all .3s ease-in-out
+                  hr
+                    opacity: 0
+                    transform: translateX(-100%)
+                    transition: all .3s ease-in-out
+      .buyy
+        background: #b61924
+        position: relative
+        .tpart
+          padding: 20px 20px
+          background: rgba(255,255,255,.8)
+          -webkit-backdrop-filter: blur(20px)
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          text-align: center
+          h3
+            color: $glounge
+            font-family: $josefine, bold
+          p
+            strong
+              font-size: 1.4em
+      #contact
+        width: 100%
+        background: url(../img/bgcontact.jpg)
+          size: cover
+          repeat: no-repeat
+          position: center center
+        padding: 50px 0
+        .container
+          height: 100%
+          box-shadow: rgba(0,0,0,.5) 3px 5px 5px
+          form
+            padding: 50px 80px
+            width: 100%
+            height: 100%
+            background: rgba(0,0,0,.5)
+            -webkit-backdrop-filter: blur(20px)
+            .tcontact
+              color: #fff
+              text-align: center
+            .row
+              input, textarea
+                background: rgba(0,0,0,.4)
+                color: #fff
+                text-shadow: rgba(0,0,0,.3) 1px 2px 2px
+                &.bb1
+                  color: #fff
+                  font-weight: bold
+  footer
+    width: 100%
+    padding: 30px 0px
+    background: #000
+    bottom: 0
+    color: #fff
+    z-index: -1
+    .container
+      .row
+        .columns
+          ul
+            list-style: none
+            li
+              a
+                font-weight: bold
+                color: #fff
+              a:hover
+                color: purple
+          form
+            input
+              color: #000
+        p
+          text-align: center

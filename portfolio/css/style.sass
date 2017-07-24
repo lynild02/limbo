@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800,900')
+*
+  box-sizing: border-box
+  font-family: 'Montserrat', sans-serif
+//General
+
+//-------
+.page-overview
+  -webkit-font-smoothing: antialiased
+  .grid
+    position: fixed
+    height: 100vh
+    width: 100%
+    top: 0
+    left: 0
+    z-index: -200 !important
+    span
+      position: absolute
+      display: block
+      width: 1px
+      background: #f4f4f4
+      height: inherit
+      &.first
+        left: 0%
+      &.second
+        left: 12.5%
+      &.thirt
+        left: 25%
+      &.fourth
+        left: 37.5%
+      &.fiveth
+        left: 50%
+      &.sixth
+        left: 62.5%
+      &.seventh
+        left: 75%
+      &.eighth
+        left: 87.5%
+  .page-nav
+    position: fixed
+    top: calc(50% - 16px)
+    right: 5px
+    z-index: 99
+    text-transform: uppercase
+    transform: rotate(-90deg) !important
+    backface-visibility: hidden
+    transform-origin: 50% 0
+    a
+      position: relative
+      font-size: 0.9em
+      display: inline-block
+      text-decoration: none
+      padding: 3px 12px
+      outline: 0
+      color: #000
+      &::before
+        width: 0
+        height: 1px
+        content: ""
+        position: absolute
+        left: -2px
+        top: 14px
+        text-align: center
+        z-index: 0
+        background: rgb(35,33,33)
+        transition: all .2s ease-in-out
+        overflow: hidden
+      &.active
+        ::before
+          width: 100%
+          transition: all .2s ease-in-out
+      span
+        position: relative
+        transition: all .2s ease
+  .wrapp
+    #logo-ag
+      width: 15%
+      min-height: 50px
+      background: url(https://www.limbocity.xyz/img/aglogo.svg)
+        size: contain
+        position: center center
+        repeat: no-repeat
+      position: absolute
+      top: 25px
+      left: 15px
+    #particles-js
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 150
+    #title-text
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 100
+      transform-style: preserve-3d
+      h1
+        font-weight: bold
+        font-size: 8em
+        line-height: 200px
+      h2
+        position: absolute
+        top: 45%
+        transform: translateY(-50%)
+        font-size: 1.6em
+        letter-spacing: 1px
+        font-weight: lighter
+        text-rendering: geometricPrecision
+  .section#work
+    position: relative
+    padding: 100px 0
+    z-index: 100
+    overflow: hidden
+    article.container
+      .wrapper-sticky
+        width: calc(-20px + 33.33%)
+        position: absolute
+        left: auto
+        right: 12.5%
+        top: 20px
+        bottom: auto
+        vertical-align: top
+        z-index: -10 !important
+        .work-bg
+          position: relative
+          z-index: -10 !important
+          img
+            height: auto
+            max-width: 100%
+            z-index: -10 !important
+      .work-item
+        width: 100%
+        float: left
+        position: relative
+        z-index: 3
+        transform-style: preserve-3d
+        margin: 100px 0 150px
+        .work-image
+          width: 50%
+          float: left
+          position: relative
+          img.equalheight
+            display: block
+            width: 100%
+        .c-text
+          position: absolute
+          display: table
+          z-index: 99
+          transform: translateZ(1000px)
+          transform-style: preserve-3d
+          top: 0
+          left: 33.33%
+          width: 66.66%
+          text-align: left
+          .c-content
+            width: 100%
+            display: table-cell
+            vertical-align: middle
+            z-index: 99
+            span.tt
+              background: #000
+              padding: 3px 7px
+              color: #fff
+              font-size: 1.2em
+              font-weight: bold
+              width: auto
+              height: auto
+              left: 0
+            h2.pp2
+              font-size: 3em
+              font-weight: bolder
+            a
+              text-decoration: line-through
+              color: #000
+              margin-left: 200px
+  .section#about
+    z-index: 101
+    overflow: hidden
+    article.container
+      padding: 100px 0
+      z-index: 102
+      .about-bg
+        width: calc(33.33% - 20px)
+        position: absolute
+        left: 30px
+        right: 12.5%
+        top: 20px
+        bottom: auto
+        vertical-align: top
+        z-index: -2
+        img
+          height: auto
+          max-width: 100%
+          z-index: -2
+      h1
+        b
+          font-family: 'Montserrat', sans-serif
+          font-size: 3em
+          font-weight: 800
+      .wrapper
+        width: 50%
+        float: left
+        display: inline-block
+        padding: 0 100px 0 0
+      .skills
+        width: 50%
+        float: left
+        display: inline-block
+        h3
+          margin: 0 0 14px 0
+          color: #fff
+          background: #000
+          clear: both
+          display: block
+          font-weight: 400
+          text-transform: uppercase
+          padding: 6px 12px
+          float: left
+          font-size: .9em
+        .list
+          font-size: 1.1em
+          line-height: 1.7em
+          position: relative
+          width: 100%
+          float: left
+          -webkit-font-smoothing: antialiased
+          font-weight: bold
+  .section#talk
+    padding: 200px 0
+    z-index: 105
+    h3
+      font-size: 3em
+      font-weight: bolder
+      margin-left: 10%
+    span
+      margin-left: 15%
+      font-size: 2.5em
+      font-weight: bold
+      color: #d2d2d2
+      z-index: 106
+      a
+        text-decoration: none
+        color: #d2d2d2
+        transition: all .3s ease-in-out
+        &:hover
+          text-decoration: line-through
+          color: purple
+          transition: all .3s ease-in-out
+      &.separated
+        margin-top: 200px
+
+@media (max-width: 1050px)
+  .page-overview
+    .wrapp
+      #title-text
+        h1
+          line-height: normal
+        h2
+          display: none !important
+@media (max-width: 750px)
+  .page-overview
+    .page-nav
+      display: none
+    .wrapp
+      #title-text
+        h1
+          text-align: center
+          font-size: 3em
+      #particles-js
+        display: none
+    .section#work
+      article.container
+        .work-item
+          .work-image
+            width: 100%
+            min-width: 100%
+          .c-text
+            min-width: 100%
+            padding: 0
+            margin: 0
+            top: 75%
+            transform: translateY(-10%)
+            left: 0
+            text-align: center !important
+            .c-content
+              span.tt
+                font-size: 1.5em
+              h2.pp2
+                font-size: 2em
+              a
+                margin-left: 100px
+@media (max-width: 450px)
+  .page-overview
+    overflow: hidden
+    .wrapp
+      #title-text
+        h1
+          text-align: center
+          font-size: 2.2em
+      #particles-js
+        display: none
+    .section#work
+      article.container
+        .work-item
+          .work-image
+            width: 100%
+            min-width: 100%
+          .c-text
+            min-width: 100%
+            padding: 0
+            margin: 0
+            top: 75%
+            transform: translateY(-10%)
+            left: 0
+            text-align: left !important
+            .c-content
+              span.tt
+                font-size: 1em
+              h2.pp2
+                font-size: 1.2em
+              a
+                margin-left: 120px
+    .section#about
+      article.container
+        h1
+          b
+            font-size: 1.5em
+            font-weight: 800
+        .wrapper,.skills
+          width: 100%
+          padding: 10px
+    .section#talk
+      h3
+        font-size: 1.8em
+        margin-left: 10%
+      span
+        margin-left: 10%
+        font-size: 1.5em
+        a
+          &.separated
+            margin-top: 80px

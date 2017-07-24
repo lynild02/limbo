@@ -11,7 +11,7 @@
   }
   $conexion = new mysqli($server, $user, $pass, $pdb);
   $conexion->set_charset('utf8');
-  $serv='http://limbocity.xyz/';
+  $serv='https://limbocity.xyz/';
 
   function evaluar($valor)
   {

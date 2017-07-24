@@ -66,7 +66,7 @@
             <ul>
               <li><a href="#">About Us</a></li>
               <li><a href="#">About ME</a></li>
-              <li><a href="#">Privacidad</a></li>
+              <li><a href="https://privacy.limbocity.xyz">Privacidad</a></li>
               <li><a href="#">Responsabilidad</a></li>
             </ul>
           </div>

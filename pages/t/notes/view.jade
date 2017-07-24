@@ -57,7 +57,7 @@ html(lang='es')
               li Inicio
                 a(href!='<?=$serv?>')
               li Portafolio
-                a(href!='<?=$serv?>/pages/p')
+                a(href!='https://portfolio.limbocity.xyz/')
               li Tutoriales
                 a(href!='<?=$serv?>/pages/t')
               li Dibujo y mas
@@ -92,14 +92,13 @@ html(lang='es')
               a.twitter-share-button(href="https://twitter.com/intent/tweet?text=Hola%20desde%20Limbo%20City" data-size='large') Tweet
             .author-f
               .img-c
-                img.lazy(data-original!='<? echo $row["imgusr"];?>')
+                img(src!='https://www.limbocity.xyz/img/block/<? echo $row["nau"];?>.jpg')
               .inf-c
-                span.nau
-                  a(href!='<? echo $row["lau"];?>') <? echo $row['nau'];?><br>
-                p.
+                span.nau <? echo $row['nau'];?><br>
+                p.tiau
                   <? echo $row['iau'];?>
                 p.tt
-                  a(href!='<? echo $row["mau"];?>') <? echo $row['mau'];?>&nbsp;&mdash;&nbsp;
+                  a(href!='https://www.limbocity.xyz/pages/about/<? echo $row["nau"];?>.php') Conoceme&nbsp;&mdash;
             #bdonativo
               p Por que sabemos que tu corazon es GRANDE :D
               form(action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top")
@@ -176,13 +175,13 @@ html(lang='es')
             .columns.three
               ul
                 li
-                  a(href='#') About Us
+                  a(href='https://www.limbocity.xyz/pages/a/') About Us
                 li
-                  a(href='#') About ME
+                  a(href='https://www.limbocity.xyz/pages/about/') About ME
                 li
-                  a(href='#') Privacidad
+                  a(href='https://privacy.limbocity.xyz/') Privacidad
                 li
-                  a(href='#') Responsabilidad
+                  a(href='https://wwwllimbocity.xyz/pages/responsability/') Responsabilidad
             .columns.three
               ul
                 li
@@ -203,7 +202,7 @@ html(lang='es')
                 .columns.four
                   input.button-primary#mc-embedded-subscribe.button(type='submit' name="subscribe" value='Suscribir')
           .row
-            p.indief.i Creado por <strong>Angel de Jesus Gomez Juarez, Lynild</strong>. <strong>Limbo City 2017</strong>
+            p.indief.i Creado por <strong>Angel de Jesus Gomez Juarez, Lynild</strong>. <strong>Limbo City 2017&copy;</strong>
           
     //- ----- SCRIPTS ----- -//
     script(type='text/javascript', src!='<?=$serv?>node_modules/angular/angular.js' async='async')

@@ -42,8 +42,19 @@
     font-family: huntress;
     src: url(../fonts/huntress.otf);
 }
-
 @font-face{
     font-family: sanf;
     src: url(../fonts/SanFrancisco.ttf);
+}
+@font-face{
+    font-family: painter;
+    src: url(../fonts/Painter_PERSONAL_USE_ONLY.ttf);
+}
+@font-face{
+    font-family: PainterPERSONALUSEONLY;
+    src: url(../fonts/Painter_PERSONAL_USE_ONLY.ttf);
+}
+@font-face{
+    font-family: nexa;
+    src: url(../fonts/Nexa.otf);
 }

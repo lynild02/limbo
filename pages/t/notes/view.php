@@ -53,7 +53,7 @@ $tit = $row['title'];
         <nav>
           <ul>
             <li>Inicio<a href="<?=$serv?>"></a></li>
-            <li>Portafolio<a href="<?=$serv?>/pages/p"></a></li>
+            <li>Portafolio<a href="https://portfolio.limbocity.xyz/"></a></li>
             <li>Tutoriales<a href="<?=$serv?>/pages/t"></a></li>
             <li>Dibujo y mas<a href="<?=$serv?>/pages/a"></a></li>
             <li>Acerda de...<a href="<?=$serv?>/pages/h"></a></li>
@@ -81,10 +81,10 @@ $tit = $row['title'];
             <p>Comparte en Twitter esta nota!</p><a href="https://twitter.com/intent/tweet?text=Hola%20desde%20Limbo%20City" data-size="large" class="twitter-share-button">Tweet</a>
           </div>
           <div class="author-f">
-            <div class="img-c"><img data-original="<? echo $row["imgusr"];?>" class="lazy"></div>
-            <div class="inf-c"><span class="nau"><a href="<? echo $row["lau"];?>"><? echo $row['nau'];?><br></a></span>
-              <p><? echo $row['iau'];?></p>
-              <p class="tt"><a href="<? echo $row["mau"];?>"><? echo $row['mau'];?>&nbsp;&mdash;&nbsp;</a></p>
+            <div class="img-c"><img src="https://www.limbocity.xyz/img/block/<? echo $row["nau"];?>.jpg"></div>
+            <div class="inf-c"><span class="nau"><? echo $row['nau'];?><br></span>
+              <p class="tiau"><? echo $row['iau'];?></p>
+              <p class="tt"><a href="https://www.limbocity.xyz/pages/about/<? echo $row["nau"];?>.php">Conoceme&nbsp;&mdash;</a></p>
             </div>
           </div>
           <div id="bdonativo">
@@ -161,10 +161,10 @@ $tit = $row['title'];
         <div class="row">
           <div class="columns three">
             <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">About ME</a></li>
-              <li><a href="#">Privacidad</a></li>
-              <li><a href="#">Responsabilidad</a></li>
+              <li><a href="https://www.limbocity.xyz/pages/a/">About Us</a></li>
+              <li><a href="https://www.limbocity.xyz/pages/about/">About ME</a></li>
+              <li><a href="https://privacy.limbocity.xyz/">Privacidad</a></li>
+              <li><a href="https://wwwllimbocity.xyz/pages/responsability/">Responsabilidad</a></li>
             </ul>
           </div>
           <div class="columns three">
@@ -191,7 +191,7 @@ $tit = $row['title'];
           </div>
         </div>
         <div class="row">
-          <p class="indief i">Creado por <strong>Angel de Jesus Gomez Juarez, Lynild</strong>. <strong>Limbo City 2017</strong></p>
+          <p class="indief i">Creado por <strong>Angel de Jesus Gomez Juarez, Lynild</strong>. <strong>Limbo City 2017&copy;</strong></p>
         </div>
       </article>
     </footer>

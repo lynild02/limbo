@@ -1,6 +1,6 @@
 {
   "name": "limbocity",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "Log for LimboCity Website",
   "main": "index.js",
   "dependencies": {
@@ -9,6 +9,7 @@
     "angular-animate": "^1.6.4",
     "angular-aria": "^1.6.4",
     "angular-material": "^1.1.4",
+    "angular-pdf": "^2.0.0",
     "angular-route": "^1.6.4",
     "animate.css": "^3.5.2",
     "fullpage.js": "^2.9.4",
@@ -17,7 +18,8 @@
     "jquery-lazyload": "^1.9.7",
     "loaders.css": "^0.1.2",
     "masonry-layout": "^4.2.0",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "tilt.js": "^1.1.21"
   },
   "devDependencies": {},
   "scripts": {

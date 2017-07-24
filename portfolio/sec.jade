@@ -1,0 +1,114 @@
+//output:index.php
+|<?php include 'm-config.php';?>
+doctype html
+html(lang='es')
+    head
+        title Angel Gomez | Freelance Web Designer & Developer
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='description', content='Portafolio - Los trabajos de diseño y programacion Web que hemos realizado, ademas de algunos proyectos personales y mas')
+        meta(name='keywords', content='limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes,portafolio,trabajos,clientes,empresas,asociaciones,portfolio,portafolio,mi,trabajo,proyecto,sitios,hechos,terminados,proceso')
+        meta(name='author', content='Angel de jesus gomez juarez, lynild02')
+        meta(name="robots", content="index, follow")
+        meta(property="og:title" content="Limbo City PRO - Portafolio")
+        meta(property="og:url" content="https://limbocity.xyz/pages/p")
+        meta(property="og:site_name" content="LimboCity")
+        meta(property="og:locale" content="es_ES")
+        meta(property="og:image" content="https://limbocity.xyz/img/og.png")
+        meta(property="og:description" content="Conoce mi trabajo y proyectos que tengo aun en proceso!")
+        
+        //- ----- link website ----- //
+        link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
+
+        //- ----- CSS Files ----- //
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/normalize.css')
+        link(rel='stylesheet', href!='<?=$serv?>Skeleton/css/skeleton.css')
+        link(rel='stylesheet', href!='<?=$serv?>node_modules/css3-animate/css/animations.css')
+        link(rel='stylesheet', href!='<?=$serv?>css/font.css')
+        link(rel='stylesheet', href='css/style.min.css')
+        
+        //- ----- JS Files ----- //
+        script(type='text/javascript', src!='<?=$serv?>node_modules/jquery/dist/jquery.min.js', attr)
+        script(type='text/javascript', src='js/main.js', attr)
+        
+    body.page-overview
+      .grid
+        span.first
+        span.second
+        span.thirt
+        span.fourth
+        span.fiveth
+        span.sixth
+        span.seventh
+        span.eighth
+      .page-nav
+        a.page-scroll(href='#about')
+          span ABOUT
+        a.page-scroll(href='#work')
+          span work
+      .wrapp.animatedParent
+        #logo-ag.animated.fadeInDownShort
+        #particles-js
+        #title-text.container.animatedParent.animateOnce
+          h2.animated.fadeInDownShort.delay-500 diseño & desarrollo digital, profesional y amigable. Freelance.
+          h1.animated.fadeInUpShort Limbo City, profesional.
+      .section#work
+        article.container
+          .wrapper-sticky
+            .work-bg.sticker
+              img(src!='<?=$serv?>img/portfolio-bg.svg')
+          |<?php
+          |  $query="SELECT * FROM projects ORDER BY date ASC";
+          |  $do = $conexion->query($query);
+          |?>
+          //- ---- Bucle ---- //
+          |<?php while($row=$do->fetch_assoc()){ ?>
+          div.animatedParent.animateOnce.work-item
+            .js-tilt.work-image.animated.fadeIn.delay-250(data-tilt)
+              img.equalheight(src!="data:image/png;base64,<?php echo base64_encode($row['image']);?>", title!="<?php echo $row['title'];?>", attr)
+            .c-text.work-info-wrapper.equalheight
+              .c-content.animated.fadeInRightShort.delay-500.work-info
+                span.tt <?php echo $row['title'];?>
+                h2.pp2 <?php echo $row['description'];?>
+                a(href!="<?php echo $row['url'];?>", target='_blank') Explorar Proyecto
+          |<?php } ?>
+          //- ---- End BUCLE ---- -//
+      .section#about.animatedParent.animateOnce
+        article.container
+          .about-bg
+            img(src!='<?=$serv?>img/about-bg.svg')
+          h1.animated.fadeInUpShort.delay-250 <b>Bueno,<br>Hola!</b>
+          br
+          br
+          .wrapper
+            p.animated.fadeInUpShort.delay-500.
+              Hola, Mi nombre es Angel de Jesus Gomez Juarez, pueden llamarme <b>Lynild</b>. He estado diseñando sitios web desde hace 3 años y contando, todo desde Mexico!<br><br>He trabajado con algunas empresas y franquisias locales. Todo como Freelancer.<br><br>Mi trabajo principalmente se basa en diseños minimalistas, pero al cliente lo que pida.<br><br>Si estas buscando a un diseñador profesional y amigable, espero ser tu primera opción.
+          .skills.animated.fadeInUpShort.delay-750
+            h3 Que puedo hacer por ti?
+            .list
+              p.
+                Diseño & Desarrollo de Sitio Web
+                <br> 
+                Direccion Creativa
+                <br> 
+                Branding
+                <br> 
+                Diseño Movil/App
+      .section#talk
+        h3 Estemos en contacto!
+        .row
+          span.columns.six
+            a(href='mailto:info@limbocity.xyz') info@limbocity.xyz
+        .row
+          span.columns.six
+            a(href='tel:+522431162653') Hablemos!
+        .row
+          span.columns.six.separated
+            &copy;&nbsp;Limbo City 2017
+    script(type='text/javascript', src!='<?=$serv?>node_modules/sticky/jquery.sticky.js')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/tilt.js/dest/tilt.jquery.js')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-match-height/dist/jquery.matchHeight-min.js')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/css3-animate/js/css3-animate-it.js')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/particles.js/particles.js')
+    script(type='text/javascript', src='js/app.js')
+    script(type='text/javascript', src!='<?=$serv?>node_modules/jquery-smooth-scroll/src/jquery.smooth-scroll.js')

@@ -13,10 +13,8 @@ $(document).ready(function(){
   ajustesIniciales();
   function ajustesIniciales(){
     $('.wrapp').css({'height':wHeight+'px'})
+    $('.equalheight').matchHeight();
+    $(".sticker").sticky({topSpacing:20,zIndex:-10});
+    $('.page-scroll').smoothScroll();
   }
-  //$('.bravhac').mouseover(function(){
-    //$('.back-big-g').css({
-      //'background':'url(img/bravhac.jpg)'
-    //})
-  //})
 });
