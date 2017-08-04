@@ -8,12 +8,14 @@
     <meta name="keywords" content="limbo,city,pro,angel,web,design,diseño,programming,program,programacion,sitio,internet,pagina,tutoriales,html,css,js,javascript,izucar,matamoros,puebla,mexico,seguridad,concejos,social,redes,portafolio,trabajos,clientes,empresas,asociaciones,portfolio,portafolio,mi,trabajo,proyecto,sitios,hechos,terminados,proceso">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
+    <meta property="fb:app_id" content="441144079589506">
     <meta property="og:title" content="Limbo City PRO - Portafolio">
-    <meta property="og:url" content="https://limbocity.xyz/pages/p">
+    <meta property="og:url" content="https://portfolio.limbocity.xyz/">
     <meta property="og:site_name" content="LimboCity">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:image" content="https://limbocity.xyz/img/og.png">
-    <meta property="og:description" content="Conoce mi trabajo y proyectos que tengo aun en proceso!">
+    <meta property="og:image" content="https://limbocity.xyz/img/og-ag.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:description" content="Diseño y Desarrollo WEB - Conoce mi trabajo y proyectos que tengo aun en proceso!">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/normalize.css">
     <link rel="stylesheet" href="<?=$serv?>Skeleton/css/skeleton.css">
@@ -82,11 +84,11 @@
       <div class="row"><span class="columns six separated">&copy;&nbsp;Limbo City 2017</span></div>
     </div>
   </body>
-  <script type="text/javascript" src="<?=$serv?>node_modules/sticky/jquery.sticky.js"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/tilt.js/dest/tilt.jquery.js"></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/sticky/jquery.sticky.js" async></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/tilt.js/dest/tilt.jquery.js" async></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/css3-animate/js/css3-animate-it.js"></script>
   <script type="text/javascript" src="<?=$serv?>node_modules/particles.js/particles.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
-  <script type="text/javascript" src="<?=$serv?>node_modules/jquery-smooth-scroll/src/jquery.smooth-scroll.js"></script>
+  <script type="text/javascript" src="<?=$serv?>node_modules/jquery-smooth-scroll/src/jquery.smooth-scroll.js" async></script>
 </html>

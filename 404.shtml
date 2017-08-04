@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv='refresh' content='30;  url="http://limbocity.xyz"'>
+    <meta http-equiv='refresh' content='30;  url="https://limbocity.xyz"'>
     <title>Los gatos lo encuentran todo... menos esto ¬¬</title>
-    <link rel="stylesheet" type="text/css" href="http://limbocity.xyz/css/error.min.css">
+    <link rel="stylesheet" type="text/css" href="https://limbocity.xyz/css/error.min.css">
   </head>
   <body>
     <div class="container">
@@ -99,7 +99,7 @@
   		setTimeout(function(){
   			var gif;
 
-  			$.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kittens', function(result){
+  			$.get('https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kittens', function(result){
   				gif = result.data.image_url;
   				$('.terminal').append('<img class="kitten-gif" src="' + gif + '"">');
   				resetForm(true);

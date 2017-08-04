@@ -10,12 +10,12 @@ html(lang='es')
         meta(name='keywords', content='keywords')
         meta(name='author', content='Angel de jesus gomez juarez, lynild02')
         meta(name="robots", content="index, follow")
-        meta(property="og:title" content="Limbo City PRO - Portafolio")
-        meta(property="og:url" content="https://limbocity.xyz/pages/p")
+        meta(property="og:title" content="Limbo City PRO - Desarrollo web, Seguridad web y tutoriales gratuitos")
+        meta(property="og:url" content="https://limbocity.xyz/")
         meta(property="og:site_name" content="LimboCity")
         meta(property="og:locale" content="es_ES")
-        meta(property="og:image" content="https://limbocity.xyz/img/og.png")
-        meta(property="og:description" content="Conoce mi trabajo y proyectos que tengo aun en proceso!")
+        meta(property="og:image" content="https://limbocity.xyz/img/og-ag.png")
+        meta(property="og:description" content="Desarrollo y diseño web, asesorias y servicios de seguridad informatica, ademas de tutoriales para aquellos interesados en el mundo digital")
         
         //- ----- link website ----- //
         link(rel='icon' href!='<?=$serv?>src/img/favicon.png' type='image/x-icon')
@@ -35,7 +35,7 @@ html(lang='es')
           #logo-ag
             img.svg-inject(src='https://www.limbocity.xyz/img/aglogow.svg')
       #hero-header
-        video(type='video/mp4' src='https://www.limbocity.xyz/src/video/init.mp4' autoplay preload loop) Your Browser does not accept this video tag.
+        video(type='video/mp4' src='http://www.limbocity.xyz/src/video/init.mp4' autoplay preload loop) Your Browser does not accept this video tag.
         #die-blank
         #limbo-init-text.container.animatedParent.text-center-w
           h1.montse.animated.fadeInDownShort.delay-250 Limbo City
@@ -61,39 +61,49 @@ html(lang='es')
         .limbo-text-c.sameh
           .text-center-w.article
             p Portafolio con todas las muestras de trabajo que tenemos por ahora.<br>Por que los hechos pesan mas que las palabras.
-            a.button.animout(href='http://portfolio.limbocity.xyz') vamos a ver
+            a.button.animout(href='https://portfolio.limbocity.xyz') vamos a ver
         .limbo-image-c.lc-img-2.sameh
           .text-center-w.article
             h5 Portfolio
             hr
             p Muestras de nuestro trabajo
-      footer#footr.half-secc
+      #art.secc.sameh.animatedParent
+        .limbo-image-c.lc-img-3.sameh
+          .text-center-w.article
+            h5 Arte / Literatura
+            hr
+            p Dibujo, Poesia, Relatos, etc.
+        .limbo-text-c.sameh
+          .text-center-w.article
+            p Sección dedicada a todo aquello que queremos compartir con ustedes, desde relatos cortos, hasta poemas y dibujos, las palabras que escribimos deberian poder viajar de cabeza en cabeza, y de boca a boca.
+            a.button.animout(href='https://www.limbocity.xyz/pages/a') vamos a ver
+      footer#footr.secc
         article.container
-          div.
+          div.space-gray
           p Contactanos
           .row
             .columns.three
               p Redes
               ul
                 li
-                  a(href='https://www.facebook.com/limbocity') Facebook
+                  a(href='https://www.facebook.com/limbocity' target='_blank') Facebook
                 li
-                  a(href='') Twitter
+                  a(href='https://twitter.com/lil_bayonetta' target='_blank') Twitter
                 li
-                  a(href='') Instagram
+                  a(href='https://www.instagram.com/ilynild/' target='_blank') Instagram
                 li
-                  a(href='') Behance
+                  a(href='https://www.behance.net/lynild02' target='_blank') Behance
             .columns.three
               p Relacionados
               ul
                 li
-                  a(href='') Portfolio
+                  a(href='http://portfolio.limbocity.xyz' target='_blank') Portfolio
                 li
-                  a(href='') Privacy
+                  a(href='http://privacy.limbocity.xyz' target='_blank') Privacy
                 li
-                  a(href='') Payment
+                  a(href='http://payment.limbocity.xyz' target='_blank') Payment
                 li
-                  a(href='') Heaven's Night
+                  a(href='http://www.heaven-night.com' target='_blank') Heaven's Night
             .columns.three
               p Comentarios
               p.mini Recuerda que puedes contactarnos para solicitar cualquier tipo de información.
@@ -108,6 +118,8 @@ html(lang='es')
                   input(type="text" name="b_1f3f3272787af7763f0467cdd_b2c233b12a" tabindex="-1" value="")
                 .u-full-width
                   input.button-primary#mc-embedded-subscribe.button.u-full-width(type='submit' name="subscribe" value='Suscribir')
+          div.space-gray
+            p Created by Lynild, Limbo City &copy; 2017
     //- ---- BACK END ---- -//
     script(type='text/javascript' src='node_modules/jquery/dist/jquery.min.js')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')

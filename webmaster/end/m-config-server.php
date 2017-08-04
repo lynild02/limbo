@@ -11,5 +11,5 @@
   if ($conexion->connect_errno) {
   	echo "An error has ocurred while try to connect with the DB {$conexion->connect_errno}";
   }
-  $serv='http://limbocity.xyz/';
+  $serv='https://limbocity.xyz/';
 ?>

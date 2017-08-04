@@ -38,7 +38,7 @@ $row = $cdb->fetch_assoc();
         <div class="ball-scale-multiple"></div>
       </div>
     </div>
-    <article class="container">
+    <article class="container cont-main">
       <header>
         <div id="logo"></div>
         <nav>

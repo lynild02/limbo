@@ -8,12 +8,12 @@
     <meta name="keywords" content="keywords">
     <meta name="author" content="Angel de jesus gomez juarez, lynild02">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Limbo City PRO - Portafolio">
-    <meta property="og:url" content="https://limbocity.xyz/pages/p">
+    <meta property="og:title" content="Limbo City PRO - Desarrollo web, Seguridad web y tutoriales gratuitos">
+    <meta property="og:url" content="https://limbocity.xyz/">
     <meta property="og:site_name" content="LimboCity">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:image" content="https://limbocity.xyz/img/og.png">
-    <meta property="og:description" content="Conoce mi trabajo y proyectos que tengo aun en proceso!">
+    <meta property="og:image" content="https://limbocity.xyz/img/og-ag.png">
+    <meta property="og:description" content="Desarrollo y diseño web, asesorias y servicios de seguridad informatica, ademas de tutoriales para aquellos interesados en el mundo digital">
     <link rel="icon" href="<?=$serv?>src/img/favicon.png" type="image/x-icon">
     <link rel="icon" href="src/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/master-s.min.css">
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div id="hero-header">
-      <video type="video/mp4" src="https://www.limbocity.xyz/src/video/init.mp4" autoplay preload loop>Your Browser does not accept this video tag.</video>
+      <video type="video/mp4" src="http://www.limbocity.xyz/src/video/init.mp4" autoplay preload loop>Your Browser does not accept this video tag.</video>
       <div id="die-blank"></div>
       <div id="limbo-init-text" class="container animatedParent text-center-w">
         <h1 class="montse animated fadeInDownShort delay-250">Limbo City</h1>
@@ -59,7 +59,7 @@
     <div id="portfolio" class="secc sameh animatedParent">
       <div class="limbo-text-c sameh">
         <div class="text-center-w article">
-          <p>Portafolio con todas las muestras de trabajo que tenemos por ahora.<br>Por que los hechos pesan mas que las palabras.</p><a href="http://portfolio.limbocity.xyz" class="button animout">vamos a ver</a>
+          <p>Portafolio con todas las muestras de trabajo que tenemos por ahora.<br>Por que los hechos pesan mas que las palabras.</p><a href="https://portfolio.limbocity.xyz" class="button animout">vamos a ver</a>
         </div>
       </div>
       <div class="limbo-image-c lc-img-2 sameh">
@@ -70,27 +70,41 @@
         </div>
       </div>
     </div>
-    <footer id="footr" class="half-secc">
+    <div id="art" class="secc sameh animatedParent">
+      <div class="limbo-image-c lc-img-3 sameh">
+        <div class="text-center-w article">
+          <h5>Arte / Literatura</h5>
+          <hr>
+          <p>Dibujo, Poesia, Relatos, etc.</p>
+        </div>
+      </div>
+      <div class="limbo-text-c sameh">
+        <div class="text-center-w article">
+          <p>Sección dedicada a todo aquello que queremos compartir con ustedes, desde relatos cortos, hasta poemas y dibujos, las palabras que escribimos deberian poder viajar de cabeza en cabeza, y de boca a boca.</p><a href="https://www.limbocity.xyz/pages/a" class="button animout">vamos a ver</a>
+        </div>
+      </div>
+    </div>
+    <footer id="footr" class="secc">
       <article class="container">
-        <div></div>
+        <div class="space-gray"></div>
         <p>Contactanos</p>
         <div class="row">
           <div class="columns three">
             <p>Redes</p>
             <ul>
-              <li><a href="https://www.facebook.com/limbocity">Facebook</a></li>
-              <li><a href="">Twitter</a></li>
-              <li><a href="">Instagram</a></li>
-              <li><a href="">Behance</a></li>
+              <li><a href="https://www.facebook.com/limbocity" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/lil_bayonetta" target="_blank">Twitter</a></li>
+              <li><a href="https://www.instagram.com/ilynild/" target="_blank">Instagram</a></li>
+              <li><a href="https://www.behance.net/lynild02" target="_blank">Behance</a></li>
             </ul>
           </div>
           <div class="columns three">
             <p>Relacionados</p>
             <ul>
-              <li><a href="">Portfolio</a></li>
-              <li><a href="">Privacy</a></li>
-              <li><a href="">Payment</a></li>
-              <li><a href="">Heaven's Night</a></li>
+              <li><a href="http://portfolio.limbocity.xyz" target="_blank">Portfolio</a></li>
+              <li><a href="http://privacy.limbocity.xyz" target="_blank">Privacy</a></li>
+              <li><a href="http://payment.limbocity.xyz" target="_blank">Payment</a></li>
+              <li><a href="http://www.heaven-night.com" target="_blank">Heaven's Night</a></li>
             </ul>
           </div>
           <div class="columns three">
@@ -112,6 +126,9 @@
               </div>
             </form>
           </div>
+        </div>
+        <div class="space-gray">
+          <p>Created by Lynild, Limbo City &copy; 2017</p>
         </div>
       </article>
     </footer>

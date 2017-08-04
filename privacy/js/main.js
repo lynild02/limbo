@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  $('#fullpage').fullpage(normalScrollElements:'.importantcontent');
+  $('#fullpage').fullpage(normalScrollElements: '.importantcontent');
 });
